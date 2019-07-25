@@ -1,0 +1,73 @@
+@import 'variables';
+
+html,body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.top-header-area{
+    background-color: $black;
+    flex-direction: row;
+    color: #ffffff;
+
+    @media(max-width:720px) {
+        display: none !important;
+
+    }
+}
+p{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    
+    li{
+        padding-left: 1.2rem;
+        display: inline-block;
+        padding-right: 20px;
+        @media(max-width:720px) {
+            display: none;
+           
+    
+        }
+        &.has-dropdown::before{
+            content: "+";
+            width: 1.3em;
+            margin-left:-1.3em; 
+            padding: 5px;
+        }
+
+        .dropdown{
+            display: none;
+        }
+    }
+}
+
+.phone-nav{
+    font-size: 24px;
+    display: none;
+
+    @media(max-width:720px) {
+        display: block;
+        right: 0;
+        position: absolute;
+    }
+
+}
+
+.navbar-brand{
+    color: $grey;
+}
+
+.app-header{
+    background: #ffffff;
+    min-height: 80px;
+    box-shadow: 0 8px 6px -10px $grey2;
+}
+
+.app-nav{
+    position: absolute;
+    right: 0;
+}
