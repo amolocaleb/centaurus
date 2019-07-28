@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       @include('partials.head')
+       
        @include('partials.styles')
     </head>
     <body>
@@ -10,9 +10,11 @@
         {{-- <header> --}}
             @include('partials.tophead')
             @include('partials.header')
+            @include('partials.services')
         {{-- </header> --}}
     <!-- end of header -->
     <!-- Main Content -->
+
         <main>
             @yield('content')
         </main>

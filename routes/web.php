@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home');
-});
+    return view('pages.welcome');
+})->name('home');
 
 Route::get('/home', function () {
     return view('pages.home');

@@ -3,7 +3,7 @@
       <div class="row h-100 align-items-center">
          <div class="col-5">
             <div class="top-header-content">
-               <p>Welcome to hair salon!</p>
+               <p>Welcome to KodeKlinik</p>
             </div>
          </div>
          <div class="col-7">

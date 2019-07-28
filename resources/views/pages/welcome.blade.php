@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Kalasinga
+                    KodeKlinik
                 </div>
 
                 <div class="links">
