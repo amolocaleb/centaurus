@@ -2,10 +2,7 @@
 
 @section('content')
 
-<div class="container">
-    
-
-</div>
+@include('partials.services')
     
 @endsection
 

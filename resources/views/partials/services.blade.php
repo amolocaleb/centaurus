@@ -14,7 +14,7 @@
                 <figure class="figure">
                     <img src="{{asset('img/web.jpg')}}" class="figure-img img-fluid rounded" alt="Web Development" srcset="">
                     <div class="overlay red">
-                        <button href="{{route('home')}}" class="figure-caption btn btn-default">Web Development</button>
+                        <a href="{{route('home')}}" class="service-title btn btn-default">Web Development</a>
                     </div>
                 </figure>
                 
@@ -24,7 +24,7 @@
                 <figure class="figure">
                     <img src="{{asset('img/android.jpg')}}" class="figure-img img-fluid rounded" alt="Android Development" srcset="">
                     <div class="overlay red">
-                        <button href="{{route('home')}}" class="figure-caption btn btn-default">Android Development</button>
+                        <a href="{{route('home')}}" class="service-title btn btn-default">Android Development</a>
                     </div>
                 </figure>
                 
@@ -34,7 +34,7 @@
                 <figure class="figure">
                     <img src="{{asset('img/rest.jpg')}}" class="figure-img img-fluid rounded" alt="REST API Development" srcset="">
                     <div class="overlay red">
-                        <button href="{{route('home')}}" class=" btn btn-default">REST API Development</button>
+                        <a href="{{route('home')}}" class="service-title btn btn-default">REST API Development</a>
                     </div>
                 </figure>
                 
@@ -44,7 +44,7 @@
                 <figure class="figure">
                     <img src="{{asset('img/wordpress.png')}}" class="figure-img img-fluid rounded" alt="Wordpress Development" srcset="">
                     <div class="overlay red">
-                        <button href="{{route('home')}}" class="figure-caption btn btn-default">Wordpress Development</button>
+                        <a href="{{route('home')}}" class="service-title btn btn-default">Wordpress Development</a>
                     </div>
                 </figure>
                 

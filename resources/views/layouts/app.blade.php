@@ -10,12 +10,13 @@
         {{-- <header> --}}
             @include('partials.tophead')
             @include('partials.header')
-            @include('partials.services')
+            
         {{-- </header> --}}
     <!-- end of header -->
     <!-- Main Content -->
 
         <main>
+                
             @yield('content')
         </main>
     <!-- end of Main COntent -->
