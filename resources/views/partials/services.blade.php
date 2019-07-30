@@ -52,3 +52,7 @@
         </div>
     </div>
 </section>
+<div>
+    <button data-target="open">Hebu upload wewe</button>
+    <input type="file" name="mine" class="" id="open">
+</div>
