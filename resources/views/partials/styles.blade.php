@@ -1,3 +1,3 @@
-<link rel="stylesheet" href="/css/app.css">
+<link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
 
 @stack('styles')

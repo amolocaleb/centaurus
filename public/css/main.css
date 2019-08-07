@@ -198,3 +198,14 @@ a {
   border-radius: 5px;
 }
 
+.kodeklinik-box {
+  height: 520px;
+  width: 456px;
+  background: rgba(66, 125, 248, 0.8);
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 35%;
+  left: 30px;
+}
+
