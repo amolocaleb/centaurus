@@ -11,5 +11,8 @@
     </div>
 </header>
 <div class="kodeklinik-box">
-
-</div>
+    <div class="content">
+       <p class="h2">Hire On Demand Developers</p> 
+    </div>
+    
+</div> 

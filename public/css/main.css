@@ -113,15 +113,6 @@ a {
   cursor: pointer;
 }
 
-.masthead {
-  height: 100vh;
-  min-height: 500px;
-  background-image: url("https://source.unsplash.com/BtbjCFUvBXs/1920x1080");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .service-section {
   display: flex;
   flex-direction: row;
@@ -198,14 +189,37 @@ a {
   border-radius: 5px;
 }
 
+.masthead {
+  height: 50vh;
+  min-height: 500px;
+  background-image: url("https://source.unsplash.com/BtbjCFUvBXs/1920x1080");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .kodeklinik-box {
-  height: 520px;
-  width: 456px;
+  height: 500px;
+  width: 436px;
   background: rgba(66, 125, 248, 0.8);
   border: none;
   border-radius: 5px;
   position: absolute;
-  top: 35%;
+  top: 24%;
   left: 30px;
+  padding: 15px 30px;
+}
+
+.kodeklinik-box .content {
+  width: 100%;
+  padding: 20px 0;
+  height: 100%;
+}
+
+.kodeklinik-box .content p.h2 {
+  color: #ffffff;
+  position: absolute;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
 }
 

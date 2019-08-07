@@ -7,7 +7,7 @@
 @endsection
 
 @push('styles')
-<link rel="stylesheet" href="{{secure_asset('css/main.css')}}" />
+<link rel="stylesheet" href="/css/main.css" />
 
 
 

@@ -12,7 +12,7 @@
             <div class="col-12 col-sm-6 col-lg-3 single-service">
                 
                 <figure class="figure">
-                    <img src="{{secure_asset('img/web.jpg')}}" class="figure-img img-fluid rounded" alt="Web Development" srcset="">
+                    <img src="/img/web.jpg" class="figure-img img-fluid rounded" alt="Web Development" srcset="">
                     <div class="overlay red">
                         <a href="{{route('home')}}" class="service-title btn btn-default">Web Development</a>
                     </div>
@@ -22,7 +22,7 @@
             <div class="col-12 col-sm-6 col-lg-3 single-service">
                 
                 <figure class="figure">
-                    <img src="{{secure_asset('img/android.jpg')}}" class="figure-img img-fluid rounded" alt="Android Development" srcset="">
+                    <img src="/img/android.jpg" class="figure-img img-fluid rounded" alt="Android Development" srcset="">
                     <div class="overlay red">
                         <a href="{{route('home')}}" class="service-title btn btn-default">Android Development</a>
                     </div>
@@ -32,7 +32,7 @@
             <div class="col-12 col-sm-6 col-lg-3 single-service">
                 
                 <figure class="figure">
-                    <img src="{{secure_asset('img/rest.jpg')}}" class="figure-img img-fluid rounded" alt="REST API Development" srcset="">
+                    <img src="/img/rest.jpg" class="figure-img img-fluid rounded" alt="REST API Development" srcset="">
                     <div class="overlay red">
                         <a href="{{route('home')}}" class="service-title btn btn-default">REST API Development</a>
                     </div>
@@ -42,7 +42,7 @@
             <div class="col-12 col-sm-6 col-lg-3 single-service">
                 
                 <figure class="figure">
-                    <img src="{{secure_asset('img/wordpress.png')}}" class="figure-img img-fluid rounded" alt="Wordpress Development" srcset="">
+                    <img src="/img/wordpress.png" class="figure-img img-fluid rounded" alt="Wordpress Development" srcset="">
                     <div class="overlay red">
                         <a href="{{route('home')}}" class="service-title btn btn-default">Wordpress Development</a>
                     </div>

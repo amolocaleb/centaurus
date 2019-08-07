@@ -1,4 +1,4 @@
-<script src="{{secure_asset('js/app.js')}}"></script>
+<script src="/js/app.js"></script>
 <script type="text/javascript">
     $('button').click(function(e){
         alert("Hey")

@@ -49377,9 +49377,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/netsmart/Desktop/centaurus/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/netsmart/Desktop/centaurus/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /home/netsmart/Desktop/centaurus/resources/sass/main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! /var/www/html/kalasinga/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/kalasinga/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
 /***/ })
