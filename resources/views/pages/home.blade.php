@@ -3,7 +3,7 @@
 @section('content')
 @include('partials.masthead')
 @include('partials.services')
-    
+    <button class="submit">Submit Me</button>
 @endsection
 
 @push('styles')
