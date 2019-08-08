@@ -10,9 +10,12 @@
         </div>
     </div>
 </header>
-<div class="kodeklinik-box">
+
+{{-- <div class="kodeklinik-box">
     <div class="content">
        <p class="h2">Hire On Demand Developers</p> 
     </div>
     
-</div> 
+</div>  --}}
+
+

@@ -192,10 +192,17 @@ a {
 .masthead {
   height: 50vh;
   min-height: 500px;
-  background-image: url("https://source.unsplash.com/BtbjCFUvBXs/1920x1080");
+  background-image: url(/images/cover.jpg?74d7ab246d9aa985d0ed0a2f4b534af1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.masthead .app-btn {
+  color: #ffffff;
+  border-color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .kodeklinik-box {
@@ -210,6 +217,12 @@ a {
   padding: 15px 30px;
 }
 
+@media (max-width: 720px) {
+  .kodeklinik-box {
+    display: none;
+  }
+}
+
 .kodeklinik-box .content {
   width: 100%;
   padding: 20px 0;
@@ -221,5 +234,19 @@ a {
   position: absolute;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
+}
+
+.scroller {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+  height: 60px;
+  width: 60px;
+  padding: 5px;
+  border-radius: 50%;
 }
 

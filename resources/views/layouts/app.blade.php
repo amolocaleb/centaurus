@@ -24,6 +24,10 @@
         <footer>
             @include('partials.scripts') 
         </footer>
+        {{-- <div class="scroller">
+            <span class="fa fa-hand-o-down"></span>
+            
+        </div> --}}
     <!-- End of Footer -->
     </body>
 </html>

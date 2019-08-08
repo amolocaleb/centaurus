@@ -1,10 +1,18 @@
 .masthead {
     height: 50vh;
     min-height: 500px;
-    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-image: url('../img/cover.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    .app-btn{
+        color: #ffffff;
+        border-color: #ffffff;
+        font-weight: 600;
+        font-size: 16px;
+
+    }
   }
 
 .kodeklinik-box{
@@ -17,7 +25,10 @@
     top: 24%;
     left: 30px;
     padding: 15px 30px;
-
+    @media(max-width:720px) {
+        display: none;
+        
+    }
     .content{
         width: 100%;
         padding: 20px 0;
@@ -33,4 +44,21 @@
     }
     
 
+}
+
+.scroller{
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+
+    //box-sizing: border-box;
+    border-radius: 50%;
+    
 }
