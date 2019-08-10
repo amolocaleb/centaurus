@@ -1,6 +1,6 @@
 <nav class="d-flex align-items-center app-header ">
         <div class="p-2">
-            <a class="navbar-brand" href="#">KodeKlinik</a>
+            <a class="navbar-brand" href="#">Kode-Klinik</a>
         </div>
         <ul class="nav app-nav">
             <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
