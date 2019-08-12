@@ -11,7 +11,7 @@
 <header class="portflio_background">
     <div class="container">
 
-    
+
 <!-- Intro -->
     
 <br>
@@ -74,7 +74,7 @@
 					
 					<div class="line-progress margin-b-20" data-prog-percent=".91"><div></div>
 						<p class="progress-title"><b>CSS</b></p></div>
-s
+
 					<div class="line-progress margin-b-20" data-prog-percent=".97"><div></div>
 						<p class="progress-title"><b>PHP</b></p></div>
 					
