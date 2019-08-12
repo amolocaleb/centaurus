@@ -1,0 +1,13 @@
+.top-header-area{
+    background-color: $black;
+    flex-direction: row;
+    color: #ffffff;
+    height: 60px;
+    .col-5{
+        padding-left: 0;
+    }
+    @media(max-width:720px) {
+        display: none !important;
+
+    }
+}

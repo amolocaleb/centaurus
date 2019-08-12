@@ -5,7 +5,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
+    color: #fff;
+    @media(max-width:720px) {
+        background: #ffffff;
+        min-height: 200px;
+        color: #000;
+        
+    }
     .app-btn{
         color: #ffffff;
         border-color: #ffffff;

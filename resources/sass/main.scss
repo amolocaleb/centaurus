@@ -1,123 +1,14 @@
-@import 'variables';
-
-html,body{
+* {
     margin: 0;
     padding: 0;
     
 }
 
-.top-header-area{
-    background-color: $black;
-    flex-direction: row;
-    color: #ffffff;
-    .col-5{
-        padding-left: 0;
-    }
-    @media(max-width:720px) {
-        display: none !important;
+@import 'variables';
+@import 'tophead';
 
-    }
-}
-p{
-    margin: 0;
-}
-
-ul{
-    list-style: none;
-    
-    li{
-        padding-left: 1.2rem;
-        display: inline-block;
-        padding-right: 20px;
-        position: relative;
-        @media(max-width:720px) {
-            display: none;
-           
-    
-        }
-        a{
-            text-decoration: none;
-            color: $grey;
-
-            
-        }
-        // &:not(:last-child):hover:after{
-        //     border-bottom: 3px solid #BCA857;
-        //     content: '';
-
-            
-        // }
-        ul.dropdown{
-            //display: none;
-            position: absolute;
-            display: none;
-            flex-direction: column;
-            flex-grow: 1;
-            padding: 15px;
-            
-            background: #ffffff;
-            border-radius:0 5px;
-            width: 200px;
-            right: 272px;
-            box-shadow: 0 0 8px #ccc;
-            //box-shadow: 0 10px 6px -6px #ffffff;
-            li{
-                
-                padding: 5px 10px;
-                width: 
-                a{
-                    width: 100%;
-                    padding: 0;
-                    height: 42px;
-                    line-height: 42px;
-                }
-            }
-            
-        
-        }
-    }
-}
-
-.phone-nav{
-    font-size: 24px;
-    display: none;
-
-    @media(max-width:720px) {
-        display: block;
-        right: 0;
-        position: absolute;
-    }
-
-}
-
-.navbar-brand{
-    color: $grey;
-}
-
-.app-header{
-    background: #ffffff;
-    min-height: 80px;
-    box-shadow: 0 8px 6px -10px $grey2;
-}
-
-.app-nav{
-    position: absolute;
-    right: 0;
-}
-.app-btn{
-    border: 1px solid #BCA857;
-    border-radius: 18px;
-}
-
-.nav-item{
-    padding: 0 10px; 
-}
-
-a{
-    cursor: pointer;
-   
-}
-
+@import 'nav';
 
 @import 'services';
 @import 'masthead';
+@import './portfolio';

@@ -49197,6 +49197,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./header */ "./resources/js/header.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49348,6 +49350,43 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/header.js":
+/*!********************************!*\
+  !*** ./resources/js/header.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var theme = window.localStorage.getItem('theme');
+
+if (theme === "dark") {
+  $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+}
+
+$(document).ready(function () {
+  var top_header_area = $('.top-header-area');
+
+  if ($(window).scroll()) {
+    if ($(window).scrollTop() > $(top_header_area).first().height()) {
+      $('.app-header').addClass('fixed-top');
+    } else {
+      $('.app-header').removeClass('fixed-top');
+    }
+  }
+
+  $('button.submit').click(function () {
+    if ($('#dark_theme').length === 0) {
+      window.localStorage.setItem('theme', 'dark');
+      $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+    } else {
+      $('#dark_theme').remove();
+      window.localStorage.removeItem('theme');
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49356,6 +49395,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dark.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/dark.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\nError: ENOENT: no such file or directory, open '/var/www/html/kalasinga/resources/sass/dark.scss'\n    at runLoaders (/var/www/html/kalasinga/node_modules/webpack/lib/NormalModule.js:313:20)\n    at /var/www/html/kalasinga/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /var/www/html/kalasinga/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at process.nextTick (/var/www/html/kalasinga/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:73:15)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)");
 
 /***/ }),
 
@@ -49371,14 +49421,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/main.scss ***!
-  \****************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/dark.scss ./resources/sass/main.scss ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/html/kalasinga/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/kalasinga/resources/sass/dark.scss */"./resources/sass/dark.scss");
 module.exports = __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
