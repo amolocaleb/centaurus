@@ -1,17 +1,17 @@
-/* Color Theme Swatches in Hex */
-
-/* Color Theme Swatches in Hex */
-
-html,
-body {
+* {
   margin: 0;
   padding: 0;
 }
+
+/* Color Theme Swatches in Hex */
+
+/* Color Theme Swatches in Hex */
 
 .top-header-area {
   background-color: #262524;
   flex-direction: row;
   color: #ffffff;
+  height: 120px;
 }
 
 .top-header-area .col-5 {
@@ -22,10 +22,6 @@ body {
   .top-header-area {
     display: none !important;
   }
-}
-
-p {
-  margin: 0;
 }
 
 ul {
@@ -93,6 +89,8 @@ ul li ul.dropdown li {
   background: #ffffff;
   min-height: 80px;
   box-shadow: 0 8px 6px -10px #BFBBBA;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .app-nav {
@@ -141,6 +139,7 @@ a {
 .service-section .single-service .figure {
   height: 100%;
   margin-bottom: 0 !important;
+  width: inherit;
 }
 
 .service-section .single-service .figure-img {
@@ -196,6 +195,16 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .masthead {
+    background: #ffffff;
+    min-height: 200px;
+    color: #000;
+  }
 }
 
 .masthead .app-btn {
