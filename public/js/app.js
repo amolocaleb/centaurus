@@ -49197,6 +49197,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./header */ "./resources/js/header.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49348,10 +49350,58 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/header.js":
+/*!********************************!*\
+  !*** ./resources/js/header.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var theme = window.localStorage.getItem('theme');
+
+if (theme === "dark") {
+  $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+}
+
+$(document).ready(function () {
+  var top_header_area = $('.top-header-area');
+
+  if ($(window).scroll()) {
+    if ($(window).scrollTop() > $(top_header_area).first().height()) {
+      $('.app-header').addClass('fixed-top');
+    } else {
+      $('.app-header').removeClass('fixed-top');
+    }
+  }
+
+  $('button.submit').click(function () {
+    if ($('#dark_theme').length === 0) {
+      window.localStorage.setItem('theme', 'dark');
+      $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+    } else {
+      $('#dark_theme').remove();
+      window.localStorage.removeItem('theme');
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
   \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/dark.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/dark.scss ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49371,14 +49421,15 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/main.scss ***!
-  \****************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/dark.scss ./resources/sass/main.scss ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/html/kalasinga/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/kalasinga/resources/sass/dark.scss */"./resources/sass/dark.scss");
 module.exports = __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/main.scss */"./resources/sass/main.scss");
 
 
