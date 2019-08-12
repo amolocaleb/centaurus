@@ -3,7 +3,7 @@
             <a class="navbar-brand" href="#">Kode-Klinik</a>
         </div>
         <ul class="nav app-nav">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="Portfolio" class="nav-link">Portfolio</a></li>
             <li class="nav-item"><a href="#" class="nav-link  has-dropdown dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">Developers</a>
                 <ul class="dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
