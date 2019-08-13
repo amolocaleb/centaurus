@@ -10,10 +10,25 @@ body,
 
 .app-header {
   background-color: #3C4042 !important;
+  box-shadow: none;
 }
 
 .app-header * {
   color: #fff;
   border-color: #fff;
+}
+
+.columns2 {
+  background: #3C4042;
+  color: #fff;
+  border-color: #3C4042;
+}
+
+.columns2 .sub-menu li a {
+  color: #fff !important;
+}
+
+.columns2 .sub-menu-item:not(:last-of-type) {
+  border-right: 1px solid #e5e5e5;
 }
 

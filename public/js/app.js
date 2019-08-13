@@ -49405,7 +49405,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\nError: ENOENT: no such file or directory, open '/var/www/html/kalasinga/resources/sass/dark.scss'\n    at runLoaders (/var/www/html/kalasinga/node_modules/webpack/lib/NormalModule.js:313:20)\n    at /var/www/html/kalasinga/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /var/www/html/kalasinga/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at process.nextTick (/var/www/html/kalasinga/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:73:15)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

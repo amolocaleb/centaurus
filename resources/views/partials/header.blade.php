@@ -4,8 +4,8 @@
         </div>
         <ul class="nav app-nav">
             <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="Portfolio" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link  has-dropdown dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">Developers</a>
+            <li class="nav-item"><a href="portfolio" class="nav-link">Portfolio</a></li>
+            {{-- <li class="nav-item"><a href="#" class="nav-link  has-dropdown dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">Developers</a>
                 <ul class="dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li class="nav-item dropdown-item "><a href="#" class="nav-link">C Developers</a></li>
                     <li class="nav-item dropdown-item "><a href="#" class="nav-link">Java Developers</a></li>
@@ -16,6 +16,51 @@
                             <li class="nav-item dropdown-item"><a href="" class="nav-link">Joomla</a></li>
                             <li class="nav-item dropdown-item"><a href="" class="nav-link">Laravel</a></li>
                             <li class="nav-item dropdown-item"><a href="" class="nav-link">CodeIgniter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li> --}}
+            <li class="nav-item">
+                <a href="#" class="nav-link">Developers</a>
+                <ul class="sub-menu columns2">
+                    <li class="sub-menu-item">
+                        <a href="#" class="d-none">Left</a>
+                        <ul class="sub-menu">
+                            <li class="nav-item"><a href="" class="nav-link">One</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Two</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Three Things</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Four</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#" class="d-none">Right</a>
+                        <ul class="sub-menu">
+                            <li class="nav-item"><a href="" class="nav-link">Five</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Six</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Seven</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Eight</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#" class="d-none">Right</a>
+                        <ul class="sub-menu">
+                            <li class="nav-item"><a href="" class="nav-link">Five</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Six</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Seven</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Eight</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#" class="d-none">Right</a>
+                        <ul class="sub-menu">
+                            <li class="nav-item"><a href="" class="nav-link">Five</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Six</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Seven</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Eight</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Five</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Six</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Seven</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Eight</a></li>
                         </ul>
                     </li>
                 </ul>

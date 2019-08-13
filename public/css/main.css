@@ -111,6 +111,41 @@ a {
   cursor: pointer;
 }
 
+.columns2 {
+  right: -100%;
+  top: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: inherit;
+  min-width: 300px;
+  height: inherit;
+  min-height: 150px;
+  padding: 15px 0;
+  border-bottom: 1px solid #59585757;
+  background-color: #FFFFFF;
+}
+
+.columns2 .sub-menu-item {
+  min-width: 150px;
+  flex: 1;
+}
+
+.columns2 .sub-menu-item:not(:last-of-type) {
+  border-right: 1px solid #5958571c;
+}
+
+.columns2 .sub-menu-item .sub-menu li {
+  padding: 0;
+  display: block;
+}
+
+.columns2 .sub-menu-item .sub-menu li a {
+  color: #272524;
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .service-section {
   display: flex;
   flex-direction: row;
@@ -123,6 +158,10 @@ a {
 
 .service-section p {
   margin-bottom: 15px;
+}
+
+.service-section .container .row:not(:first-of-type) {
+  margin-bottom: 80px;
 }
 
 .service-section .single-service {
