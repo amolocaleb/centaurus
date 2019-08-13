@@ -96,11 +96,34 @@ ul li ul.dropdown li {
 .app-nav {
   position: absolute;
   right: 0;
+  height: 100%;
+}
+
+.app-nav .nav-link {
+  height: 100%;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .app-btn {
   border: 1px solid #BCA857;
   border-radius: 18px;
+}
+
+.nav-link:hover {
+  background: #313131;
+}
+
+.nav-link:hover::after {
+  transition: all 0.4s;
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #2c2a2a;
+  transform: translateX(-50%);
 }
 
 .nav-item {
@@ -114,16 +137,22 @@ a {
 .columns2 {
   right: -100%;
   top: 100%;
-  display: flex;
+  display: none;
   flex-direction: row;
   position: absolute;
   width: inherit;
   min-width: 300px;
+  cursor: pointer;
   height: inherit;
   min-height: 150px;
   padding: 15px 0;
   border-bottom: 1px solid #59585757;
   background-color: #FFFFFF;
+  z-index: 899999988;
+}
+
+.columns2:hover {
+  display: flex;
 }
 
 .columns2 .sub-menu-item {
@@ -142,8 +171,15 @@ a {
 
 .columns2 .sub-menu-item .sub-menu li a {
   color: #272524;
-  padding-right: 0;
-  padding-left: 0;
+}
+
+.dev-has-dropdown:hover + .columns2 {
+  display: flex;
+  transition: 3s ease-in-out;
+}
+
+.sub-menu .nav-link {
+  padding: 5px;
 }
 
 .service-section {
