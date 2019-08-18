@@ -1,0 +1,18 @@
+body, .service-section {
+  background-color: #292929;
+  color: #fff;
+}
+
+.service-section .container {
+  background-color: #3C4042;
+}
+
+.app-header {
+  background-color: #3C4042 !important;
+}
+
+.app-header * {
+  color: #fff;
+  border-color: #fff;
+}
+/*# sourceMappingURL=dark.css.map */
