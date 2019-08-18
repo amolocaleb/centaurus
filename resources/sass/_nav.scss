@@ -6,39 +6,27 @@ ul{
         display: inline-block;
         padding-right: 20px;
         position: relative;
+        
         @media(max-width:720px) {
             display: none;
-           
-    
         }
         a{
             text-decoration: none;
             color: $grey;
-
-            
         }
-        // &:not(:last-child):hover:after{
-        //     border-bottom: 3px solid #BCA857;
-        //     content: '';
-
-            
-        // }
+        
         ul.dropdown{
-            //display: none;
             position: absolute;
             display: none;
             flex-direction: column;
             flex-grow: 1;
             padding: 15px;
-            
             background: #ffffff;
             border-radius:0 5px;
             width: 200px;
             right: 272px;
             box-shadow: 0 0 8px #ccc;
-            //box-shadow: 0 10px 6px -6px #ffffff;
             li{
-                
                 padding: 5px 10px;
                 width: 
                 a{
@@ -48,8 +36,6 @@ ul{
                     line-height: 42px;
                 }
             }
-            
-        
         }
     }
 }
@@ -57,13 +43,11 @@ ul{
 .phone-nav{
     font-size: 24px;
     display: none;
-
     @media(max-width:720px) {
         display: block;
         right: 0;
         position: absolute;
     }
-
 }
 
 .navbar-brand{
@@ -80,17 +64,85 @@ ul{
 .app-nav{
     position: absolute;
     right: 0;
+    height: 100%;
+    .nav-link{
+        height: 100%;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
 }
 .app-btn{
     border: 1px solid #BCA857;
     border-radius: 18px;
+    
+}
+.nav-link:hover{
+    background:#313131;
+    
 }
 
+.nav-link:hover::after{
+    transition: all 0.4s;
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #2c2a2a;
+    transform: translateX(-50%);
+    
+}
 .nav-item{
     padding: 0 10px; 
+    
 }
 
 a{
     cursor: pointer;
-   
+}
+.columns2{
+    right: -100%;
+    top: 100%;
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    width: inherit;
+    min-width: 300px;
+    cursor: pointer;
+    height: inherit;
+    min-height: 150px;
+    padding: 15px 0;
+    border-bottom: 1px solid #59585757;
+    background-color: #FFFFFF;
+    z-index: 899999988;
+    &:hover{
+        display: flex;
+    }
+     .sub-menu-item{
+         min-width: 150px;
+        flex: 1;
+        &:not(:last-of-type){
+            border-right: 1px solid #5958571c;
+        }
+        .sub-menu li{
+            padding: 0;
+            a{
+                color: #272524;
+                
+            }
+            display: block;
+        }
+    }
+
+    
+}
+
+.dev-has-dropdown:hover + .columns2{
+    display: flex;
+    transition: 3s ease-in-out;
+}
+
+.sub-menu .nav-link{
+    padding: 5px;
 }

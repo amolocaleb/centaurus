@@ -27,4 +27,6 @@ Route::get('/Portfolio', function () {
 });
 Route::get('/Portfolio/s_portfolio', function () {
     return view('pages.portfolio.s_portfolio');
+Route::get('/portfolio', function () {
+    return view('pages.portfolio');
 });
