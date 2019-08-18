@@ -4,7 +4,7 @@
         </div>
         <ul class="nav app-nav">
             <li class="nav-item"><a href="/" class="nav-link nav-line-height  d-flex align-items-center"><span>Home</span></a></li>
-            <li class="nav-item"><a href="portfolio" class="nav-link nav-line-height  d-flex align-items-center"><span>Portfolio</span></a></li>
+            <li class="nav-item"><a href="Portfolio" class="nav-link nav-line-height  d-flex align-items-center"><span>Portfolio</span></a></li>
             {{-- <li class="nav-item"><a href="#" class="nav-link  has-dropdown dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">Developers</a>
                 <ul class="dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li class="nav-item dropdown-item "><a href="#" class="nav-link">C Developers</a></li>
