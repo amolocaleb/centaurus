@@ -27,6 +27,12 @@ Route::get('/home', function () {
     return view('pages.home');
 });
 
-Route::get('/portfolio', function () {
-    return view('pages.portfolio');
+
+
+//portfolio routes
+Route::get('/Portfolio', function () {
+    return view('pages.portfolio/portfolio');
+});
+Route::get('/Portfolio/s_portfolio', function () {
+    return view('pages.portfolio.s_portfolio');
 });

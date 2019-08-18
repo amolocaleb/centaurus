@@ -2,9 +2,13 @@
     margin-top: 10px;
  
 //    background-image: url('../../public/img/android.jpg');
-   .header{
-    margin-top: 50px;
-   }
+//    .header{
+//     margin-top: 50px;
+//    }
+.portflio{
+    position: relative;
+    min-height: 100vh;
+
   .container{
     img{
         height: 200px;
@@ -12,7 +16,7 @@
     }
   }
 
-  }
+  
   .line-progress{ 
       position: relative; 
       padding-bottom: 25px;
@@ -74,3 +78,13 @@
 
 .panel-area .panel-title .icon.minus,
 .panel-area .panel-title.active .icon.plus{ display: none; }
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.heading{
+    text-transform: uppercase;
+}
