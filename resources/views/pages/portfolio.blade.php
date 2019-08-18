@@ -4,7 +4,7 @@
 
 @push('styles')
 <link rel="stylesheet" href="/css/main.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 @endpush
 
@@ -112,10 +112,10 @@
 </header>
 
 
-    <script src="js/jquery-3.2.1.min.js"></script>	
+    {{-- <script src="js/jquery-3.2.1.min.js"></script>	
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>	
 	<script src="js/progressbar.min.js"></script>	
 	<script src="js/jquery.fluidbox.min.js"></script>	
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script> --}}
 @endsection

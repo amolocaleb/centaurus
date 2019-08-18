@@ -7,9 +7,7 @@ ul{
         padding-right: 20px;
         position: relative;
         
-        @media(max-width:720px) {
-            display: none;
-        }
+        
         a{
             text-decoration: none;
             color: $grey;
@@ -48,6 +46,14 @@ ul{
         right: 0;
         position: absolute;
     }
+
+    & + .app-nav{
+        width:80px;
+        height:300px;
+        background:#f1f1f1;
+        right :5px;
+    }
+    
 }
 
 .navbar-brand{
@@ -70,6 +76,9 @@ ul{
         padding-bottom: 0;
         padding-top: 0;
     }
+    @media(max-width:720px) {
+    display: none;
+    }
 }
 .app-btn{
     border: 1px solid #BCA857;
@@ -77,22 +86,40 @@ ul{
     
 }
 .nav-link:hover{
-    background:#313131;
+    //background:#313131;
     
 }
 
-.nav-link:hover::after{
-    transition: all 0.4s;
-    content: "";
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: #2c2a2a;
-    transform: translateX(-50%);
+.nav-line-height.nav-link{
+    &:after{
+        transition: all .9s;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 5px;
+        background: red;
+        transform: translateX(-50%);
+    }
+    &:hover,&.active{
+        &:after{
+            transition: all .9s;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 95%;
+            height: 5px;
+            background: red;
+            transform: translateX(-50%);
+        }
+    }
+    
+
     
 }
+
 .nav-item{
     padding: 0 10px; 
     
@@ -107,7 +134,7 @@ a{
     display: none;
     flex-direction: row;
     position: absolute;
-    width: inherit;
+    width: 420px;
     min-width: 300px;
     cursor: pointer;
     height: inherit;
@@ -144,5 +171,7 @@ a{
 }
 
 .sub-menu .nav-link{
-    padding: 5px;
+    padding: 5px 20px;
+    
 }
+

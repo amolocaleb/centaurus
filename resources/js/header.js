@@ -2,6 +2,7 @@ let theme = window.localStorage.getItem('theme');
 
 if (theme === "dark"){
     $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+    //document.querySelector('head').appendChild('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
 }
 
 $(document).ready( function() {
@@ -26,3 +27,14 @@ $(document).ready( function() {
         
     });
 });
+const previous = document.querySelector('.active').classList.toggle('active');
+const [,currentURI] = location.pathname.split('/') || '/';
+const uriPathname = currentURI || '/';
+Array.from(document.querySelectorAll('.nav-link')).forEach(node => {
+    
+    node.classList.toggle( 'active',!!( node.getAttribute('href') === uriPathname ) );
+    
+});
+
+
+//targetElement.classList.add('active');
