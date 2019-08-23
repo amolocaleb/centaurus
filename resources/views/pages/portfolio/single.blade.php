@@ -4,38 +4,38 @@
 
 @push('styles')
 <link rel="stylesheet" href="/css/main.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 @endpush
 
-<header class="portflio_background">
+<div class="portflio">
     <div class="container">
-
+    
+	<h3 class="h1">{{$id}}</h3>
 
 <!-- Intro -->
     
 <br>
         <div class="row">
-        <div class="col-md-3 col-lg-3">
+        <div class="col-sx-12 col-md-3 col-lg-3">
 
             <img src="img/profileNone.jpg" alt="" style="height: 250px;width: 250px;border-radius:10px;">
                     
         </div>
 
-        <div class="col-md-9 col-lg-9">
+        <div class= col-sx-12col-md-9 col-lg-9">
         <ul class="professional-intro">
             <br>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-sx-12 col-md-6">
                 <h2><b>ChikaiaDev</b></h2>
-                <h4 >Key Account Manager</h4>
                 <ul>
                     <li><b>BORN : </b>November 07, 1995</li>
                     <li><b>EMAIL : </b>iancheboi1@outlook.com</li>
                     <li><b>MARITAL STATUS : </b>Single</li>
                 </ul>
                 </div>
-                <div class="col-md-6">
+                <div class=" col-sx-12 col-md-6">
                 <h3><b>Web Developer</b></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Fuga delectus nesciunt molestiae quis, iste maiores sunt perspiciatis! Delectus, 
@@ -108,14 +108,16 @@
 					</div><!-- panel -->
                 </div>
 </div>
-    </div>
-</header>
+</div>
+</div>
 
 
-    <script src="js/jquery-3.2.1.min.js"></script>	
+
+
+    {{-- <script src="js/jquery-3.2.1.min.js"></script>	
 	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>	
 	<script src="js/progressbar.min.js"></script>	
 	<script src="js/jquery.fluidbox.min.js"></script>	
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js"></script> --}}
 @endsection
