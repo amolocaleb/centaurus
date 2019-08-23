@@ -3,6 +3,15 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
 /* Color Theme Swatches in Hex */
 
 /* Color Theme Swatches in Hex */
@@ -30,8 +39,6 @@
   flex-wrap: wrap;
   padding: 80px 0;
   background-color: #fff;
-  border-bottom: 1px solid #e4e2e2;
-  margin-bottom: 40px;
 }
 
 .service-section p {
@@ -187,21 +194,23 @@ button.submit {
   margin-top: 10px;
 }
 
-.portflio_background .header {
-  margin-top: 50px;
+.portflio {
+  position: relative;
+  min-height: 100vh;
+  /* ACCORDIANS */
 }
 
-.portflio_background .container img {
+.portflio .container img {
   height: 200px;
   width: 200px;
 }
 
-.line-progress {
+.portflio .line-progress {
   position: relative;
   padding-bottom: 25px;
 }
 
-.line-progress .progressbar-text {
+.portflio .line-progress .progressbar-text {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -210,16 +219,14 @@ button.submit {
   color: #777 !important;
 }
 
-.line-progress .progress-title {
+.portflio .line-progress .progress-title {
   position: absolute;
   bottom: 0;
   left: 0;
   color: #777;
 }
 
-/* ACCORDIANS */
-
-.panel-area .panel-title {
+.portflio .panel-area .panel-title {
   padding: 10px 20px;
   cursor: pointer;
   position: relative;
@@ -229,7 +236,7 @@ button.submit {
   color: #fff;
 }
 
-.panel-area .panel-desc {
+.portflio .panel-area .panel-desc {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -238,31 +245,40 @@ button.submit {
   transform-origin: top;
 }
 
-.panel-area .panel-title .icon {
+.portflio .panel-area .panel-title .icon {
   float: right;
   font-size: 0.7em;
   margin-top: 5px;
 }
 
-.panel-area .panel-title.active {
+.portflio .panel-area .panel-title.active {
   background: #28023D;
 }
 
-.panel-area .panel-title.active + .panel-desc {
+.portflio .panel-area .panel-title.active + .panel-desc {
   opacity: 1;
   padding: 20px 20px 0;
   max-height: 300px;
   transform: scaleY(1);
 }
 
-.panel-area .panel-title .icon.plus,
-.panel-area .panel-title.active .icon.minus {
+.portflio .panel-area .panel-title .icon.plus,
+.portflio .panel-area .panel-title.active .icon.minus {
   display: block;
 }
 
-.panel-area .panel-title .icon.minus,
-.panel-area .panel-title.active .icon.plus {
+.portflio .panel-area .panel-title .icon.minus,
+.portflio .panel-area .panel-title.active .icon.plus {
   display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.heading {
+  text-transform: uppercase;
 }
 
 ul {

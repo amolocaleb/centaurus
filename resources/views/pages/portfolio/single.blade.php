@@ -11,7 +11,7 @@
 <div class="portflio">
     <div class="container">
     
-
+	<h3 class="h1">{{$id}}</h3>
 
 <!-- Intro -->
     

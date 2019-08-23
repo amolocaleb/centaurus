@@ -4,6 +4,97 @@
 
 /* Color Theme Swatches in Hex */
 
+.portflio_background {
+  margin-top: 10px;
+}
+
+.portflio {
+  position: relative;
+  min-height: 100vh;
+  /* ACCORDIANS */
+}
+
+.portflio .container img {
+  height: 200px;
+  width: 200px;
+}
+
+.portflio .line-progress {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.portflio .line-progress .progressbar-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #777 !important;
+}
+
+.portflio .line-progress .progress-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #777;
+}
+
+.portflio .panel-area .panel-title {
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  border-radius: 3px;
+  background: #FFAD01;
+  color: #fff;
+}
+
+.portflio .panel-area .panel-desc {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.05s, opacity 0.25s 0.1s, transform 0.1s;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.portflio .panel-area .panel-title .icon {
+  float: right;
+  font-size: 0.7em;
+  margin-top: 5px;
+}
+
+.portflio .panel-area .panel-title.active {
+  background: #28023D;
+}
+
+.portflio .panel-area .panel-title.active + .panel-desc {
+  opacity: 1;
+  padding: 20px 20px 0;
+  max-height: 300px;
+  transform: scaleY(1);
+}
+
+.portflio .panel-area .panel-title .icon.plus,
+.portflio .panel-area .panel-title.active .icon.minus {
+  display: block;
+}
+
+.portflio .panel-area .panel-title .icon.minus,
+.portflio .panel-area .panel-title.active .icon.plus {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

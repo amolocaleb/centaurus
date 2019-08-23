@@ -30,9 +30,9 @@ Route::get('/home', function () {
 
 
 //portfolio routes
-Route::get('/Portfolio', function () {
+Route::get('/portfolio', function () {
     return view('pages.portfolio/portfolio');
 });
-Route::get('/Portfolio/s_portfolio', function () {
-    return view('pages.portfolio.s_portfolio');
+Route::get('/portfolio/{id}', function ($id) {
+    return view('pages.portfolio.single',['id'=>$id]);
 });

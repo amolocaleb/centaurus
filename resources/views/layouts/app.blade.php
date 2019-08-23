@@ -21,6 +21,7 @@
         <main>
                 
             @yield('content')
+            
         </main>
     <!-- end of Main COntent -->
     <!-- Footer -->

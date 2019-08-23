@@ -29,10 +29,11 @@ $(document).ready( function() {
 });
 const previous = document.querySelector('.active').classList.toggle('active');
 const [,currentURI] = location.pathname.split('/') || '/';
+console.log(currentURI)
 const uriPathname = currentURI || '/';
 Array.from(document.querySelectorAll('.nav-link')).forEach(node => {
-    
-    node.classList.toggle( 'active',!!( node.getAttribute('href') === uriPathname ) );
+    let href =  node.getAttribute('href').split('/')[1] || '/' ;
+    node.classList.toggle( 'active',!!( href === uriPathname ) );
     
 });
 

@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-@include('partials.masthead')
-@include('partials.services')
+@include('pages.home.masthead')
+@include('pages.home.services')
+@include('pages.home.team')
     <button class="submit">Submit Me</button>
 @endsection
 
