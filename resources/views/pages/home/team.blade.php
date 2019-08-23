@@ -1,4 +1,4 @@
- <div class="service-section">
+ <div class="team-section">
 <div class="row">
             <div class="col-12">
                 <div class="text-center section-heading">
