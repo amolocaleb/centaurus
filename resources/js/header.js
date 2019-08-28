@@ -29,7 +29,6 @@ $(document).ready( function() {
 });
 const previous = document.querySelector('.active').classList.toggle('active');
 const [,currentURI] = location.pathname.split('/') || '/';
-console.log(currentURI)
 const uriPathname = currentURI || '/';
 Array.from(document.querySelectorAll('.nav-link')).forEach(node => {
     let href =  node.getAttribute('href').split('/')[1] || '/' ;

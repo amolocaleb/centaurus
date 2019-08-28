@@ -49398,7 +49398,6 @@ var _ref = location.pathname.split('/') || '/',
     _ref2 = _slicedToArray(_ref, 2),
     currentURI = _ref2[1];
 
-console.log(currentURI);
 var uriPathname = currentURI || '/';
 Array.from(document.querySelectorAll('.nav-link')).forEach(function (node) {
   var href = node.getAttribute('href').split('/')[1] || '/';
