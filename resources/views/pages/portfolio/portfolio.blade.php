@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 @endpush
 
 
@@ -26,8 +28,13 @@ section{
 	padding: 10rem 0;
 	background-color: #fff;
 }
+span{
+	color: #9e9e9e;
+	font-size: 20px;
+	padding-bottom:2rem; 
+}
 .heading{
-
+	margin-top: 5rem;
 	text-transform: uppercase;
 	font-size: 3.5rem;
 	letter-spacing: 3px;
@@ -48,92 +55,11 @@ section{
 	transform: translateX(-50%);
 	border-radius: 2rem;
 }
-.card-wrapper{
-	display: flex;
-	align-items: center;
-	align-content: center;
-	flex-direction: column;
-}
-.card{
-	width: 19rem;
-	background-color: #ebeef8;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin:  0;
-	box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
-	border: none;
 
-
-}
-.card .card-img{ 
-	width: 100%;
-	height: 15rem;
-	object-fit: cover;
-	-webkit-clip-path:  polygon(0 0, 100% 0%, 100% 78%, 0% 100%);
-	clip-path: polygon(0 0, 100% 0%, 100% 78%, 0% 100%);
-
-}
-.card .profile-img{
-	width: 14rem;
-	height: 14rem;
-	object-fit: cover;
-	border-radius: 50%;
-	margin-top: -11rem;
-	z-index: 999;
-	border: .8rem solid  #ebeef8;
-}
-.job-title{
-	color: #777;
-	font-size: 1.5rem;
-	font-weight: 300;
-
-}
-.about{
-	font-size: 1rem;
-	margin: 0 0;
-	font-style: italic;
-	text-align: center;
-	color: #333;
-	padding: 0 1rem;
-}
-.card .btn{
-	padding: 1rem 2.5rem;
-	background-color: #45e19f;
-	border-radius: 2rem;
-	margin:.5rem 0;
-	text-transform: uppercase;
-	color:#eee;
-	font-size: 1rem;
-	transition: all .5s;
-}
-.card .btn:hover{
-transform: translateY(-4px);
-box-shadow: .5rem .5rem 2rem rgba(0,0,0,.4);
-}
-.card .btn:active{
-	transform: translateY(0);
-	box-shadow: .none;
-}
-.social-media{
-	width: 100%;
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	padding: 1rem 0;
-	margin-top: .5rem;
-
-}
-.social-media i{
-	font-size: 2rem;
-}
 
 .fa-facebook-square{
 	color:#3b5999;
-}
+	}
 .fa-twitter-square{
 	color: #55acee;
 }
@@ -162,16 +88,100 @@ box-shadow: .5rem .5rem 2rem rgba(0,0,0,.4);
 	}
 }
 
+.demo{ background: #262526; }
+.our-team{
+    padding: 20px 15px 30px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+}
+.our-team .pic{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 25px;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .pic{
+    background: #dc3545;
+    border-radius: 50%;
+}
+.pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.our-team .title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color:#d1d1d1 ;
+    text-transform: uppercase;
+    margin: 0 0 7px 0;
+}
+.our-team .post{
+    display: block;
+    font-size: 5rem;
+    color: #17bebb;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+	padding: 50px;
+}
+.our-team .social{
+	
+    padding: 0;
+    margin: 0;
+    list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	
+	
+}
+.our-team .social li{
+    display: flex;
+	flex-direction: column;
+	padding: 0;
+}
+.our-team .social li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #17bebb;
+    border: 1 solid #a2d0eb;
+    transition: all 0.5s ease 0s;
+	font-size: 1.8rem;
+	padding: 0;
+}
+.our-team:hover .social li a{
+	
+    brightness: (50%);
+    color: #fff;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+
+
+
+
+
+
 .carousel{
-	padding-top: -10rem;
-	margin-top: -10rem;
-	padding-bottom: 5rem;
+	padding-top: -5rem;
+	margin-top: -5rem;
+	padding-bottom: 0;
 
 }
 .d-block{
-	height: 28rem;
+	height: 25rem;
 	object-fit: cover;
 	filter: blur(5px);
+	align-content: center;
 	
 }
 
@@ -180,196 +190,255 @@ box-shadow: .5rem .5rem 2rem rgba(0,0,0,.4);
 	margin-right: -15px;
  }	
 
-	 /* ---------------------------------
-8. PROGRESSIONS SECTION
---------------------------------- */
-
-
-.counter{ position: relative; }
-	
-	.counter .title{ text-align: right; margin-right: 130px; color: #FDAC05; }
-	
-	.counter .desc{ position: absolute; bottom: 4px; right: 0px; width: 110px; }
-
-	@media only screen and (max-width: 1200px) {
-	/* ---------------------------------
-	9. COUNTER SECTION
-	--------------------------------- */
-
-	.counter-section{ text-align: center; padding: 50px 0 20px; }
-
-	.counter{ display: inline-block; }
-	
-	.counter .desc{ text-align: left; }
-}
-.team{
-	margin-bottom: 40px;
-}
-.team a{
-	display: inline-block;
-	margin: 0 30px;
-	width: 160px;
-	height: 160px;
-	overflow:hidden;
-	border-radius: 50%;
-}
-.team a img{
-width: 120%;
-filter: grayscale(100%);
-transition: 0.4s all;
+ 
+.counter{
+	padding: 40px 0;
+	width: 100%;
 
 }
-.section{
-	width: 600px;
-	margin:auto;
-	font-size: 20px;
-	text-align: justify;
-	height: 0;
-	overflow: hidden;
+.inner{
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
 }
-.section:target{
-	height:auto;
-}
-.name{
-	display:block;
-	margin-bottom: 30px;
+.col{
+	flex: 1;
 	text-align: center;
-	text-transform:uppercase;
-	font-size:22px;
+	padding: 20px;
+	text-transform: uppercase;
+	color: #dc3545;
+	font-size: 30rem;
+
 }
+.col i{
+	font-size: 40px;
+	
+}
+.num{
+	font-size: 40px;
+	margin: 20px 0;
+}
+
 </style>
 
 
 
 
-<section>
-
-
-	<!--carousel  -->
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-		<div class="carousel-inner">
-		  <div class="carousel-item active">
-			<img src="../images/client.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
-					<h3>First Testimonial</h3>
-					<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
-				</div>
-		  </div>
-		  <div class="carousel-item">
-			<img src="../images/client2.jpg" class="d-block w-100" alt="...">
-			<div class="carousel-caption d-none d-md-block">
-					<h3>Second Testimonial</h3>
-					<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
-				</div>
-		  </div>
-		  <div class="carousel-item">
-			<img src="../images/client3.jpg" class="d-block w-100" alt="...">
-			<div class="carousel-caption d-none d-md-block">
-					<h3>Third Testimonial</h3>
-					<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
-				</div>
-		  </div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="sr-only">Next</span>
-		</a>
-	  </div>
-
 
 
 	<div class="container">
 
-		
-
-
-
 		<h1 class="heading"><b>Meet the team</b></h1>
 
 	
+		<div class="row">
+				<div class="col-md-2 col-sm-6">
+						<div class="our-team">
+							<div class="pic">
+								<img src="img/ian.jpg">
+							</div>
+							<ul class="social">
+								<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+								<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
+								<li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+							</ul>
+						</div>
+					</div>
 
+					<div class="col-md-4 col-sm-6" >
+							<h3 class="title">Chikaia Dev</h3>
+							<span class="job-title">Lead Designer</span>
+							<p class="about">
+								The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
+								making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
+							</p>
 
-		<div class="card-wrapper">
-			<!--Cards  -->
-			<div class="card">
-			<img src="img/portfolio_back.jpg" alt="card-background"  class="card-img">
-			<img src="img/ian.jpg" alt="profile picture" class="profile-img">
-			<H1>Chikaia Dev</H1>
-			<p class="job-title">Lead designer</p>
-			<p class="about">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				Est exercitationem, eius rerum
-			</p>
-			<a href="/Portfolio/s_portfolio" class="btn">View more</a>
-			<ul class="social-media">
-				<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+					</div>
+
+			<div class="col-md-2 col-sm-6">
+					<div class="our-team">
+						<div class="pic">
+							<img src="img/colo.jpg">
+						</div>
+						<ul class="social">
+							<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
+							<li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+						</ul>
+					</div>
+				</div>
+	
+				<div class="col-md-4 col-sm-6" >
+						<h3 class="title">Loco Msee</h3>
+						<span class="post">Web Developer</span>
+						<p class="about">
+								The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
+							 making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
+							</p>
+	
+				</div>
+
+			</div>
+			<div class="row">
+					<div class="col-md-2 col-sm-6">
+							<div class="our-team">
+								<div class="pic">
+									<img src="img/cal.jpg">
+								</div>
+								<ul class="social">
+									<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+									<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
+									<li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6" >
+								<h3 class="title">Mr Korekt</h3>
+								<span class="job-title">Git Guru</span>
+								<p class="about">
+										The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
+										making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
+									</p>
+
+						</div>
+
+						<div class="col-md-2 col-sm-6 col-sm-12">
+								<div class="our-team">
+									<div class="pic">
+										<img src="img/local.jpg">
+									</div>
+									<ul class="social">
+										<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+										<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+										<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
+										<li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+									</ul>
+								</div>
+							</div>
 				
-			</ul>
+							<div class="col-md-4 col-sm-6 col-sm-12" >
+									<h3 class="title">Local Man</h3>
+									<span class="post">Spectator</span>
+									<p class="about">
+											The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
+										making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
+										</p>
+				
+							</div>
 
 			</div>
 
-			<!--Cards  -->
-			<div class="card">
-			<img src="img/portfolio_back.jpg" alt="card-background"  class="card-img">
-			<img src="img/colo.jpg" alt="profile picture" class="profile-img">
-			<H1>Loco Msee</H1>
-			<p class="job-title">Lion king fan</p>
-			<p class="about">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				Est exercitationem, eius rerum
-			</p>
-			<a href="/Portfolio/s_portfolio" class="btn">View more</a>
-			<ul class="social-media" >
-				<li ><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-				<li ><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
-				<li ><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
-				
-			</ul>
-
-			</div>
-
-			<!--Cards  -->
-			<div class="card">
-			<img src="img/portfolio_back.jpg" alt="card-background" class="card-img">
-			<img src="img/cal.jpg" alt="profile picture" class="profile-img">
-			<H1>Mr Korekt</H1>
-			<p class="job-title">Git Gurru</p>
-			<p class="about">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				Est exercitationem, eius rerum
-			</p>
-			<a href="/Portfolio/s_portfolio" class="btn">View more</a>
-			<ul class="social-media">
-				<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
-				
-			</ul>
-
-			</div>
-
-		
-		</div>
 		<!-- end of code wrapper-->
 
 
-<!-- Progresion -->
+	</div>
+<!-- end of container-->
+
+	<section>
+
+
+			<!--carousel  -->
+		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="../images/client.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h3>First Testimonial</h3>
+							<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
+						</div>
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/client2.jpg" class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+							<h3>Second Testimonial</h3>
+							<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
+						</div>
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/client3.jpg" class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+							<h3>Third Testimonial</h3>
+							<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
+						</div>
+				  </div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div>
+		
+		</section>
+		<!-- Progresion -->
+
+		<section class="progression-section section" id="counter">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+					
+						</div><!-- col-sm-12 -->
+						<div class="col-sm-6 col-md-6 col-lg-3 counter">
+							<div class=" margin-b-30 inner">
+									<div class="up">
+											<i class="fas fa-user-friends"></i>
+											<div class="num">360</div>
+											<p>Satisfied clients</p>	
+											</div>
+								
+								
+							</div><!-- counter -->
+						</div><!-- col-md-3-->
+						
+						<div class="col-sm-6 col-md-6 col-lg-3 counter">
+							<div class=" margin-b-30 inner">
+									<div class="up">
+											<i class="fas fa-briefcase"></i>
+											<div class="num">50</div>
+											Completed Projects
+											</div>
+							</div><!-- counter -->
+						</div><!-- col-md-3-->
+						
+						<div class="col-sm-6 col-md-6 col-lg-3 counter">
+							<div class=" margin-b-30 inner">
+									<div class="up">
+											<i class="fas fa-user-tie"></i>
+											<div class="num">75</div>
+											Pro Coders
+											</div>
+							</div><!-- counter -->
+						</div><!-- col-md-3-->
+						<div class="col-sm-6 col-md-6 col-lg-3 counter">
+								<div class=" margin-b-30 inner">
+										<div class="up">
+												<i class="fas fa-award"></i>
+												<div class="num">25</div>
+												Awards
+												</div>
+								</div><!-- counter -->
+							</div><!-- col-md-3-->
+						
+					</div><!-- row -->
+				</div><!-- container -->
+			</section><!-- progression-section -->
 
 		
 
 	</div>
-</section>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-@endsection
+<script type="text/javascript">
+		$(".num").counterUp({delay:10,time:1000});
+	</script>
+
+@endsection 
