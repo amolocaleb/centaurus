@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/css/main.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 @endpush
 
@@ -60,22 +61,24 @@ section{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin: 1rem 0;
+	margin:  0;
 	box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
+	border: none;
+
 
 }
 .card .card-img{ 
 	width: 100%;
-	height: 20rem;
+	height: 15rem;
 	object-fit: cover;
 	-webkit-clip-path:  polygon(0 0, 100% 0%, 100% 78%, 0% 100%);
 	clip-path: polygon(0 0, 100% 0%, 100% 78%, 0% 100%);
 
 }
 .card .profile-img{
-	width: 15rem;
-	height: 15rem;
+	width: 14rem;
+	height: 14rem;
 	object-fit: cover;
 	border-radius: 50%;
 	margin-top: -11rem;
@@ -90,7 +93,7 @@ section{
 }
 .about{
 	font-size: 1rem;
-	margin: 1.5rem 0;
+	margin: 0 0;
 	font-style: italic;
 	text-align: center;
 	color: #333;
@@ -100,10 +103,10 @@ section{
 	padding: 1rem 2.5rem;
 	background-color: #45e19f;
 	border-radius: 2rem;
-	margin: 1rem 0;
+	margin:.5rem 0;
 	text-transform: uppercase;
 	color:#eee;
-	font-size: 1.4rem;
+	font-size: 1rem;
 	transition: all .5s;
 }
 .card .btn:hover{
@@ -120,12 +123,12 @@ box-shadow: .5rem .5rem 2rem rgba(0,0,0,.4);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	padding: 2rem 0;
-	margin-top: 1.5rem;
-	border-top: 1px solid rgba(0, 0, 0, .1)
+	padding: 1rem 0;
+	margin-top: .5rem;
+
 }
 .social-media i{
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 .fa-facebook-square{
@@ -147,7 +150,7 @@ box-shadow: .5rem .5rem 2rem rgba(0,0,0,.4);
 	opacity: .5;
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 600px){
 	.card-wrapper{
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -159,15 +162,137 @@ box-shadow: .5rem .5rem 2rem rgba(0,0,0,.4);
 	}
 }
 
+.carousel{
+	padding-top: -10rem;
+	margin-top: -10rem;
+	padding-bottom: 5rem;
 
+}
+.d-block{
+	height: 28rem;
+	object-fit: cover;
+	filter: blur(5px);
+	
+}
+
+.portfolioContainer{ 
+	margin-left: -15px; 
+	margin-right: -15px;
+ }	
+
+	 /* ---------------------------------
+8. PROGRESSIONS SECTION
+--------------------------------- */
+
+
+.counter{ position: relative; }
+	
+	.counter .title{ text-align: right; margin-right: 130px; color: #FDAC05; }
+	
+	.counter .desc{ position: absolute; bottom: 4px; right: 0px; width: 110px; }
+
+	@media only screen and (max-width: 1200px) {
+	/* ---------------------------------
+	9. COUNTER SECTION
+	--------------------------------- */
+
+	.counter-section{ text-align: center; padding: 50px 0 20px; }
+
+	.counter{ display: inline-block; }
+	
+	.counter .desc{ text-align: left; }
+}
+.team{
+	margin-bottom: 40px;
+}
+.team a{
+	display: inline-block;
+	margin: 0 30px;
+	width: 160px;
+	height: 160px;
+	overflow:hidden;
+	border-radius: 50%;
+}
+.team a img{
+width: 120%;
+filter: grayscale(100%);
+transition: 0.4s all;
+
+}
+.section{
+	width: 600px;
+	margin:auto;
+	font-size: 20px;
+	text-align: justify;
+	height: 0;
+	overflow: hidden;
+}
+.section:target{
+	height:auto;
+}
+.name{
+	display:block;
+	margin-bottom: 30px;
+	text-align: center;
+	text-transform:uppercase;
+	font-size:22px;
+}
 </style>
 
 
 
 
 <section>
+
+
+	<!--carousel  -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="../images/client.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h3>First Testimonial</h3>
+					<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
+				</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="../images/client2.jpg" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+					<h3>Second Testimonial</h3>
+					<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
+				</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="../images/client3.jpg" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+					<h3>Third Testimonial</h3>
+					<p>"Praesent commodo cursus magna, vel scelerisque nisl consectetur..."</p>
+				</div>
+		  </div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	  </div>
+
+
+
 	<div class="container">
+
+		
+
+
+
 		<h1 class="heading"><b>Meet the team</b></h1>
+
+	
+
+
 		<div class="card-wrapper">
 			<!--Cards  -->
 			<div class="card">
@@ -232,28 +357,19 @@ box-shadow: .5rem .5rem 2rem rgba(0,0,0,.4);
 
 			</div>
 
-			<!--Cards  -->
-			<div class="card">
-			<img src="img/portfolio_back.jpg" alt="card-background" class="card-img" >
-			<img src="img/local.jpg" alt="profile picture" class="profile-img">
-			<H1>Local Man</H1>
-			<p class="job-title">Spectator</p>
-			<p class="about">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-				Est exercitationem, eius rerum
-			</p>
-			<a href="/Portfolio/s_portfolio" class="btn">View more</a>
-			<ul class="social-media">
-				<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
-				<li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
-				
-			</ul>
-
-			</div>
+		
 		</div>
+		<!-- end of code wrapper-->
+
+
+<!-- Progresion -->
+
+		
+
 	</div>
 </section>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 @endsection
