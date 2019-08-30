@@ -44,7 +44,7 @@
             letter-spacing: .2em;
             text-transform: uppercase; }
         .section-title {
-            color: #007bff;
+            color: #e20b1d;
             font-size: 40px;
             font-weight: 900; }
         @media (max-width: 991.98px) {
@@ -92,16 +92,21 @@
                         <div class="col-md-6 mb-5 mb-lg-0 position-relative">
                             <img src="images/about.jpg" class="img-fluid" alt="Image">
                             <div class="experience">
-                                <span class="year">10 years</span>
+                                <span class="year">With years</span>
                                 <span class="caption">of experience</span>
                             </div>
 
                         </div>
                         <div class="col-md-5 ml-auto">
-                            <h3 class="section-sub-title">About Us</h3>
-                            <h2 class="section-title mb-3">Welcome To KodeKlinik</h2>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat blanditiis nihil, consectetur. Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius vero vel!</p>
-                            <p><a href="#" class="btn btn-primary btn-black--hover">Learn More</a></p>
+
+                            <h2 class="section-title mb-3">About Us</h2>
+                            <p class="mb-4">Our passionate team of experienced developers believes in quality
+                                software without seams and are driven by the craving for a happy customer on
+                                every height of innovation. Our customer focus gives us motivation to deliver
+                                exceptionally innovative software. We collaborate, innovate and focus on our
+                                software products which are not only timely and cost effective but are also
+                                executed remarkably well to exceed our customers’ expectations.</p>
+
                         </div>
                     </div>
                 </div>
@@ -117,51 +122,52 @@
                 <div class="container">
                     <div class="row mb-5">
                         <div class="col-12 text-center">
-                            <h3 class="section-sub-title">Team</h3>
-                            <h2 class="section-title mb-3">Our Team</h2>
+                            <h3 class="section-sub-title">Products</h3>
+                            <h2 class="section-title mb-3">Our Products</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
                             <div class="person text-center">
-                                <img src="img/ian.jpg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
-                                <h3>Punju de</h3>
-                                <p class="position text-muted">Co-Founder, President</p>
-                                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                                <ul class="ul-social-circle">
-                                    <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                                </ul>
+                                <img src="img/cs2.jpg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
+                                <h3>StudNet Blog</h3>
+                                <p class="position text-muted">Country,Kenya</p>
+                                <p class="mb-4">Social Media like blog for university students</p>
+                                </br>
+                                {{--<ul class="ul-social-circle">--}}
+                                    {{--<li><a href="#"><span class="fab fa-facebook"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-twitter"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-linkedin"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-instagram"></span></a></li>--}}
+                                {{--</ul>--}}
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
                             <div class="person text-center">
-                                <img src="img/collo.png" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
-                                <h3>locomsee</h3>
-                                <p class="position text-muted">Co-Founder, COO</p>
-                                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                                <ul class="ul-social-circle">
-                                    <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                                </ul>
+                                <img src="img/knm.svg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
+                                <h3>Kinemax</h3>
+                                <p class="position text-muted">Country,Namibia</p>
+                                <p class="mb-4">Reserve movie seats at your comfort</p>
+                                {{--<ul class="ul-social-circle">--}}
+                                    {{--<li><a href="#"><span class="fab fa-facebook"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-twitter"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-linkedin"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-instagram"></span></a></li>--}}
+                                {{--</ul>--}}
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
                             <div class="person text-center">
-                                <img src="img/cal.jpg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
-                                <h3>Bob Marley</h3>
-                                <p class="position text-muted">Marketing</p>
-                                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                                <ul class="ul-social-circle">
-                                    <li><a href="#"><span class="fab fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                                </ul>
+                                <img src="img/md.png" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
+                                <h3>MediCare</h3>
+                                <p class="position text-muted">Country, Unkown</p>
+                                <p class="mb-4">Book medical appointments</p>
+                                {{--<ul class="ul-social-circle">--}}
+                                    {{--<li><a href="#"><span class="fab fa-facebook"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-twitter"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-linkedin"></span></a></li>--}}
+                                    {{--<li><a href="#"><span class="fab fa-instagram"></span></a></li>--}}
+                                {{--</ul>--}}
                             </div>
                         </div>
                     </div>
