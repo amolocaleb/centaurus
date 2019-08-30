@@ -172,8 +172,8 @@
 
 
         @endsection
-@include('partials.login')
-@endsection
+{{--@include('partials.login')--}}
+{{--@endsection--}}
 @push('styles')
 <link rel="stylesheet" href="/css/main.css">
     
