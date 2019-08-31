@@ -6,7 +6,8 @@
 
 require('./bootstrap');
 require ('./header');
-
+require('./jquery.easing.min')
+require('./sb-admin-2.min')
 window.Vue = require('vue');
 
 /**

@@ -27,7 +27,9 @@ Route::get('/home', function () {
     return view('pages.home');
 });
 
-
+Route::get('/admin', function () {
+    return view('layouts.admin');
+});
 
 //portfolio routes
 Route::get('/portfolio', function () {
@@ -36,3 +38,7 @@ Route::get('/portfolio', function () {
 Route::get('/portfolio/{id}', function ($id) {
     return view('pages.portfolio.single',['id'=>$id]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
