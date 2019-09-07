@@ -42,3 +42,8 @@ Route::get('/portfolio/{id}', function ($id) {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+Route::resource('admabout', 'AboutController');
