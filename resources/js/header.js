@@ -1,10 +1,26 @@
-let theme = window.localStorage.getItem('theme');
 
-if (theme === "dark"){
-    $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
-    //document.querySelector('head').appendChild('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+
+const initSetUp = ()    =>  {
+    if (null === localStorage.getItem('config') ){
+        localStorage.setItem('config',{});
+    }
+    let theme = localStorage.getItem('theme');
+
+    if (theme === "dark"){
+
+        $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+        
+    }
+    const previous = document.querySelector('.active').classList.toggle('active');
+    const [,currentURI] = location.pathname.split('/') || '/';
+    const uriPathname = currentURI || '/';
+    Array.from(document.querySelectorAll('.nav-link')).forEach(node => {
+        let href =  node.getAttribute('href').split('/')[1] || '/' ;
+        node.classList.toggle( 'active',!!( href === uriPathname ) );
+        
+    });
 }
-
+initSetUp();
 $(document).ready( function() {
     let top_header_area = $('.top-header-area');
     if ($(window).scroll()) {
@@ -27,14 +43,6 @@ $(document).ready( function() {
         
     });
 });
-const previous = document.querySelector('.active').classList.toggle('active');
-const [,currentURI] = location.pathname.split('/') || '/';
-const uriPathname = currentURI || '/';
-Array.from(document.querySelectorAll('.nav-link')).forEach(node => {
-    let href =  node.getAttribute('href').split('/')[1] || '/' ;
-    node.classList.toggle( 'active',!!( href === uriPathname ) );
-    
-});
 
 
-//targetElement.classList.add('active');
+

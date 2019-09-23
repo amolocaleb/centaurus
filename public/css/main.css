@@ -368,11 +368,6 @@ a {
   color: #272524;
 }
 
-.dev-has-dropdown:hover + .columns2 {
-  display: flex;
-  transition: 3s ease-in-out;
-}
-
 .sub-menu .nav-link {
   padding: 5px 20px;
 }

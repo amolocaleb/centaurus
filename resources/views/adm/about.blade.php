@@ -30,10 +30,10 @@
                 <th width="180px">Action</th>
             </tr>
 
-            @foreach($abouts as $about)
+            @foreach($abouts as $key => $about)
 
                 <tr>
-                    <td><b>{{++$i}}.</b></td>
+                    <td><b>{{++$key}}.</b></td>
                     <td>{{$about->title}}</td>
                     <td>{{$about->description}}</td>
 
@@ -54,7 +54,7 @@
 
 
         </table>
-        {!! $abouts->links() !!}
+        {{-- {!! $abouts->links() !!} --}}
 
     </div>
 

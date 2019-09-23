@@ -49183,6 +49183,72 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/admin.js":
+/*!*******************************!*\
+  !*** ./resources/js/admin.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var mailControls = function mailControls() {
+  document.querySelectorAll('#mail_minimize,#mail_expand,#mail_close,#create_email').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      mailControlClickHandler(el.id);
+    });
+  });
+};
+
+mailControls();
+
+var mailControlClickHandler = function mailControlClickHandler(id) {
+  var handler = {
+    matchId: function matchId(id) {
+      if ('mail_expand' === id) {
+        this.expand();
+      } else if ('mail_minimize' === id) {
+        this.minimize();
+      } else if ('mail_close' === id) {
+        this.close();
+      } else if ('create_email' === id) {
+        this.openMailArea();
+      }
+    },
+    expand: function expand() {
+      var el = document.querySelector('#mailWrapper');
+      el.classList.remove('d-none');
+    },
+    minimize: function minimize() {
+      var el = document.querySelector('#mailWrapper');
+      el.classList.add('d-none');
+    },
+    close: function close() {
+      var el = document.querySelector('.mail-text-area');
+      el.classList.add('d-none');
+    },
+    openMailArea: function openMailArea() {
+      var el = document.querySelector('.mail-text-area');
+      el.classList.remove('d-none');
+    }
+  };
+  handler.matchId(id);
+};
+
+var openCompose = function openCompose() {
+  var url = location.href.split('#', 2);
+
+  if (url.length > 1) {
+    if ('compose' === url[1].toLowerCase()) {
+      mailControlClickHandler('create_email');
+    }
+  }
+};
+
+openCompose();
+
+var resizeMailPopUp = function resizeMailPopUp() {};
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -49197,11 +49263,13 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./header */ "./resources/js/header.js");
-
 __webpack_require__(/*! ./jquery.easing.min */ "./resources/js/jquery.easing.min.js");
 
 __webpack_require__(/*! ./sb-admin-2.min */ "./resources/js/sb-admin-2.min.js");
+
+__webpack_require__(/*! ./header */ "./resources/js/header.js");
+
+__webpack_require__(/*! ./admin */ "./resources/js/admin.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -49369,12 +49437,31 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var theme = window.localStorage.getItem('theme');
+var initSetUp = function initSetUp() {
+  if (null === localStorage.getItem('config')) {
+    localStorage.setItem('config', {});
+  }
 
-if (theme === "dark") {
-  $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">'); //document.querySelector('head').appendChild('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
-}
+  var theme = localStorage.getItem('theme');
 
+  if (theme === "dark") {
+    $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+  }
+
+  var previous = document.querySelector('.active').classList.toggle('active');
+
+  var _ref = location.pathname.split('/') || '/',
+      _ref2 = _slicedToArray(_ref, 2),
+      currentURI = _ref2[1];
+
+  var uriPathname = currentURI || '/';
+  Array.from(document.querySelectorAll('.nav-link')).forEach(function (node) {
+    var href = node.getAttribute('href').split('/')[1] || '/';
+    node.classList.toggle('active', !!(href === uriPathname));
+  });
+};
+
+initSetUp();
 $(document).ready(function () {
   var top_header_area = $('.top-header-area');
 
@@ -49396,17 +49483,6 @@ $(document).ready(function () {
     }
   });
 });
-var previous = document.querySelector('.active').classList.toggle('active');
-
-var _ref = location.pathname.split('/') || '/',
-    _ref2 = _slicedToArray(_ref, 2),
-    currentURI = _ref2[1];
-
-var uriPathname = currentURI || '/';
-Array.from(document.querySelectorAll('.nav-link')).forEach(function (node) {
-  var href = node.getAttribute('href').split('/')[1] || '/';
-  node.classList.toggle('active', !!(href === uriPathname));
-}); //targetElement.classList.add('active');
 
 /***/ }),
 

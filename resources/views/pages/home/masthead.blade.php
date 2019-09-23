@@ -5,7 +5,7 @@
             <div class="col-12 text-center">
                 <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
                 <p class="lead">A great starter layout for a landing page</p>
-                <button class="btn app-btn">Hire Our Developers</button>
+                <a class="btn app-btn" href="{{'/admin'}}">Hire Our Developers</a>
                 <button class="play-btn"><i class="fa fa-play-circle play-icon"></i></button>
             </div>
         </div>

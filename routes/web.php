@@ -20,7 +20,16 @@ Route::get('/developers', function () {
 })->name('developers');
 
 Route::get('/about', function () {
-    return view('pages.about');
+    $arr = [];
+    for ($i=0;$i<10;$i++)   {
+        $closure = new stdClass();
+        $closure->id = $i;
+        $closure->description = 'Description '.$i;
+        $closure->title = 'Title '.$i;
+        $arr[] = $closure;
+    }
+    
+    return view('adm.about',['abouts'=> $arr]);
 })->name('about');
 
 Route::get('/home', function () {
@@ -29,6 +38,9 @@ Route::get('/home', function () {
 
 Route::get('/admin', function () {
     return view('layouts.admin');
+});
+Route::get('/mail', function () {
+    return view('pages.mail');
 });
 
 //portfolio routes
