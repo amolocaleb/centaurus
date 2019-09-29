@@ -61,3 +61,38 @@ openCompose();
 const resizeMailPopUp = () => {
     
 };
+
+$(document).ready(function(){
+    $('#check_all_received').click(function(e){
+
+        let mails_listed = $('.checkbox');
+        
+        $.each(mails_listed,(i,val)=>{
+            
+            if  ($(e.target).is(':checked'))
+                val.setAttribute('checked',true);
+            else
+                val.removeAttribute('checked');
+        })
+
+    });
+
+   document.querySelector('#print_mail').addEventListener('click',(e)=>{e.preventDefault();pdfGenerator()});
+    
+});
+
+let pdfGenerator =   function(){
+    let htm =   $(".open-message").html();
+    const obj  =   new jsPDF();
+    obj.fromHTML(htm,5,5,{
+        "width":170,
+        "elementHandlers":{
+            "#editor":function(el,renderer){
+                return true;
+            }
+        }
+    });
+
+    obj.save(`Doc-${Math.random()}.pdf`);
+
+};

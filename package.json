@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-ckfinder": "^11.0.5",
+    "html2canvas": "^1.0.0-rc.4",
+    "jspdf": "^1.5.3",
     "line-awesome": "^1.0.2"
   }
 }

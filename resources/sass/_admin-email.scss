@@ -14,23 +14,20 @@
 .mail-text-area{
     position: fixed;
     width:500px;
-    
     height: inherit;
     bottom: 0;
     padding: 6px 12px;
     right: 70px;
     z-index: 3;
-    
     @media(max-width: 900px) {
         position: relative;
         width: 100%;
         right: 0;
     }
-    
 }
+
 .mail-text-area-controls{
     background:#404040;
- 
 }
 
 a.btn {
@@ -61,13 +58,9 @@ a.btn {
     }
 }
 .received-message{
-    
     flex-direction: row;
-    border:{
-        width: 1px;
-        style: solid;
-    };
-    // height: 50px;
+    
+    
 }
 
 .inbox-1{
@@ -76,28 +69,21 @@ a.btn {
         top: 5px;
         bottom: 5px;
     }
-    border:{
-        width:1px;
-        style: dotted;
-        top:none;
-    }
+    
     height: inherit;
     display: flex;
     flex-direction: column;
     cursor: pointer;
 
-    &:first-of-type {
-        border:{
-            top:{
-                style: dotted;
-                width:1px;
-            }
+    
+    &:hover{
+        box-shadow: 0 6px 4px -3px #706a6a;
+        background:#FFFFFF;
+        color: #000;
+        .right-control{
+            display: flex;
         }
-    }
-
-    &:hover .right-control{
-        display: flex;
-    }
+    } 
     .left-control{
         padding:{
             left: 15px;
@@ -135,7 +121,8 @@ a.btn {
     
     display: flex;
     border: 1px solid #ccc;
-    // border-radius: 3px;
+    background: #ffffff;
+    
     width: 15px;
     height: 15px;
     margin-bottom: 0;
@@ -157,7 +144,7 @@ a.btn {
     background: #F8F9FC;
     height: 30px;
     right: calc(3rem + 2px);
-    
+    color:#000;
     &:hover{
         display: flex;
     }
@@ -200,4 +187,57 @@ a.btn {
             }
         }
     }
+}
+
+.top-controls{
+    width: 100%;
+    height: 30px;
+}
+
+/**
+    Open-message Area
+*/
+
+.open-message{
+    background: #fff;
+    display: flex;
+    padding: 15px 6px;
+    flex-direction: column;
+}
+
+.messenger-email-address{
+    font-size: .7rem;
+}
+
+.time-stamp {
+    padding-right: .75rem;
+    font-size: .75rem;
+}
+
+.bg-sidebar {
+  background: url("/images/sidebar2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-main{
+  background: url("/images/sidebar.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-password-image {
+  background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
+  background-position: center;
+  background-size: cover;
+}
+
+ul#accordionSidebar::before{
+    content: "";
+    height: 100%;
+    width: inherit;
+    position: absolute;
+    background: #000;
+    opacity: .5;
+    color: #fff;
 }
