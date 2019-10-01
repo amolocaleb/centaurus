@@ -36,3 +36,5 @@ Route::get('/portfolio', function () {
 Route::get('/portfolio/{id}', function ($id) {
     return view('pages.portfolio.single',['id'=>$id]);
 });
+Route::resource('developers', 'DeveloperController');
+Route::get('developers', 'DeveloperController@index');
