@@ -8,48 +8,48 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-lg-3 single-service">
-                
-                <figure class="figure">
-                    <img src="/img/web.jpg" class="figure-img img-fluid rounded" alt="Web Development" srcset="">
-                    <div class="overlay red">
-                        <a href="{{route('home')}}" class="service-title btn btn-default">Web Development</a>
-                    </div>
-                </figure>
-                
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 single-service">
-                
-                <figure class="figure">
-                    <img src="/img/android.jpg" class="figure-img img-fluid rounded" alt="Android Development" srcset="">
-                    <div class="overlay red">
-                        <a href="{{route('home')}}" class="service-title btn btn-default">Android Development</a>
-                    </div>
-                </figure>
-                
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 single-service">
-                
-                <figure class="figure">
-                    <img src="/img/rest.jpg" class="figure-img img-fluid rounded" alt="REST API Development" srcset="">
-                    <div class="overlay red">
-                        <a href="{{route('home')}}" class="service-title btn btn-default">REST API Development</a>
-                    </div>
-                </figure>
-                
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3 single-service">
-                
-                <figure class="figure">
-                    <img src="/img/wordpress.png" class="figure-img img-fluid rounded" alt="Wordpress Development" srcset="">
-                    <div class="overlay red">
-                        <a href="{{route('home')}}" class="service-title btn btn-default">Wordpress Development</a>
-                    </div>
-                </figure>
-                
-            </div>
+         <div class="row">
+    <!-- Team Member 1 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="Kaleb">
+        <div class="card-body text-center">
+          {{-- <h5 class="card-title mb-0">Team Member</h5> --}}
+          <div class="card-text text-black-50">WordPress</div>
         </div>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          {{-- <h5 class="card-title mb-0">Team Member</h5> --}}
+          <div class="card-text text-black-50">Android Development</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 3 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://images.unsplash.com/photo-1563884072595-24a1d9dd5647?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          {{-- <h5 class="card-title mb-0">Team Member</h5> --}}
+          <div class="card-text text-black-50">iOS Development</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 4 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://images.unsplash.com/photo-1556792189-55769c8dfbac?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          {{-- <h5 class="card-title mb-0">Team Member</h5> --}}
+          <div class="card-text text-black-50">PHP Frameworks Development</div>
+        </div>
+      </div>
+    </div>
+  </div>
     </div>
 </section>
 

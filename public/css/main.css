@@ -112,91 +112,6 @@ a {
   border-radius: 5px;
 }
 
-.masthead {
-  height: 50vh;
-  min-height: 500px;
-  background-image: url("https://images.unsplash.com/photo-1551739440-5dd934d3a94a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #fff;
-}
-
-@media (max-width: 720px) {
-  .masthead {
-    background: #ffffff;
-    min-height: 200px;
-    color: #000;
-  }
-}
-
-.masthead .app-btn {
-  color: #ffffff;
-  border-color: #ffffff;
-  font-weight: 600;
-  font-size: 16px;
-  -webkit-filter: blur(0) !important;
-          filter: blur(0) !important;
-}
-
-.masthead .align-items-center {
-  -webkit-filter: blur(0) !important;
-          filter: blur(0) !important;
-}
-
-.kodeklinik-box {
-  height: 500px;
-  width: 436px;
-  background: rgba(66, 125, 248, 0.8);
-  border: none;
-  border-radius: 5px;
-  position: absolute;
-  top: 24%;
-  left: 30px;
-  padding: 15px 30px;
-}
-
-@media (max-width: 720px) {
-  .kodeklinik-box {
-    display: none;
-  }
-}
-
-.kodeklinik-box .content {
-  width: 100%;
-  padding: 20px 0;
-  height: 100%;
-}
-
-.kodeklinik-box .content p.h2 {
-  color: #ffffff;
-  position: absolute;
-  margin: 0 auto;
-  font-family: "Open Sans", sans-serif;
-}
-
-.scroller {
-  display: block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #fff;
-  border: 1px solid #ccc;
-  color: #000;
-  height: 60px;
-  width: 60px;
-  padding: 5px;
-  border-radius: 50%;
-}
-
-button.submit {
-  background: linear-gradient(to right, #ff8a00 0%, #da1b60 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .portflio_background {
   margin-top: 10px;
 }
@@ -453,11 +368,6 @@ a {
   color: #272524;
 }
 
-.dev-has-dropdown:hover + .columns2 {
-  display: flex;
-  transition: 3s ease-in-out;
-}
-
 .sub-menu .nav-link {
   padding: 5px 20px;
 }
@@ -574,5 +484,79 @@ a {
   .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
+}
+
+.masthead {
+  height: 50vh;
+  min-height: 500px;
+  background-image: url("https://images.unsplash.com/photo-1551739440-5dd934d3a94a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .masthead {
+    background: #ffffff;
+    min-height: 200px;
+    color: #000;
+  }
+}
+
+.masthead .app-btn {
+  color: #ffffff;
+  border-color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  -webkit-filter: blur(0) !important;
+          filter: blur(0) !important;
+}
+
+.masthead .align-items-center {
+  -webkit-filter: blur(0) !important;
+          filter: blur(0) !important;
+}
+
+.scroller {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+  height: 60px;
+  width: 60px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+button.submit {
+  background: linear-gradient(to right, #ff8a00 0%, #da1b60 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.play-btn {
+  position: absolute;
+  left: 40px;
+  bottom: -10px;
+  padding: 10px;
+  background: transparent;
+  color: #73161687;
+  border: none;
+}
+
+.play-btn:active,
+.play-btn:focus {
+  border: none;
+  border-color: transparent;
+}
+
+.play-icon {
+  font-size: 3.4em;
 }
 

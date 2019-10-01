@@ -5,8 +5,11 @@
  */
 
 require('./bootstrap');
+require('./jquery.easing.min');
+require('./sb-admin-2.min');
 require ('./header');
 
+require('./admin');
 window.Vue = require('vue');
 
 /**

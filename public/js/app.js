@@ -49183,6 +49183,72 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/admin.js":
+/*!*******************************!*\
+  !*** ./resources/js/admin.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var mailControls = function mailControls() {
+  document.querySelectorAll('#mail_minimize,#mail_expand,#mail_close,#create_email').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      mailControlClickHandler(el.id);
+    });
+  });
+};
+
+mailControls();
+
+var mailControlClickHandler = function mailControlClickHandler(id) {
+  var handler = {
+    matchId: function matchId(id) {
+      if ('mail_expand' === id) {
+        this.expand();
+      } else if ('mail_minimize' === id) {
+        this.minimize();
+      } else if ('mail_close' === id) {
+        this.close();
+      } else if ('create_email' === id) {
+        this.openMailArea();
+      }
+    },
+    expand: function expand() {
+      var el = document.querySelector('#mailWrapper');
+      el.classList.remove('d-none');
+    },
+    minimize: function minimize() {
+      var el = document.querySelector('#mailWrapper');
+      el.classList.add('d-none');
+    },
+    close: function close() {
+      var el = document.querySelector('.mail-text-area');
+      el.classList.add('d-none');
+    },
+    openMailArea: function openMailArea() {
+      var el = document.querySelector('.mail-text-area');
+      el.classList.remove('d-none');
+    }
+  };
+  handler.matchId(id);
+};
+
+var openCompose = function openCompose() {
+  var url = location.href.split('#', 2);
+
+  if (url.length > 1) {
+    if ('compose' === url[1].toLowerCase()) {
+      mailControlClickHandler('create_email');
+    }
+  }
+};
+
+openCompose();
+
+var resizeMailPopUp = function resizeMailPopUp() {};
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -49197,7 +49263,13 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./jquery.easing.min */ "./resources/js/jquery.easing.min.js");
+
+__webpack_require__(/*! ./sb-admin-2.min */ "./resources/js/sb-admin-2.min.js");
+
 __webpack_require__(/*! ./header */ "./resources/js/header.js");
+
+__webpack_require__(/*! ./admin */ "./resources/js/admin.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -49365,12 +49437,31 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var theme = window.localStorage.getItem('theme');
+var initSetUp = function initSetUp() {
+  if (null === localStorage.getItem('config')) {
+    localStorage.setItem('config', {});
+  }
 
-if (theme === "dark") {
-  $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">'); //document.querySelector('head').appendChild('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
-}
+  var theme = localStorage.getItem('theme');
 
+  if (theme === "dark") {
+    $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
+  }
+
+  var previous = document.querySelector('.active').classList.toggle('active');
+
+  var _ref = location.pathname.split('/') || '/',
+      _ref2 = _slicedToArray(_ref, 2),
+      currentURI = _ref2[1];
+
+  var uriPathname = currentURI || '/';
+  Array.from(document.querySelectorAll('.nav-link')).forEach(function (node) {
+    var href = node.getAttribute('href').split('/')[1] || '/';
+    node.classList.toggle('active', !!(href === uriPathname));
+  });
+};
+
+initSetUp();
 $(document).ready(function () {
   var top_header_area = $('.top-header-area');
 
@@ -49392,17 +49483,196 @@ $(document).ready(function () {
     }
   });
 });
-var previous = document.querySelector('.active').classList.toggle('active');
 
-var _ref = location.pathname.split('/') || '/',
-    _ref2 = _slicedToArray(_ref, 2),
-    currentURI = _ref2[1];
+/***/ }),
 
-var uriPathname = currentURI || '/';
-Array.from(document.querySelectorAll('.nav-link')).forEach(function (node) {
-  var href = node.getAttribute('href').split('/')[1] || '/';
-  node.classList.toggle('active', !!(href === uriPathname));
-}); //targetElement.classList.add('active');
+/***/ "./resources/js/jquery.easing.min.js":
+/*!*******************************************!*\
+  !*** ./resources/js/jquery.easing.min.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+(function (factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function ($) {
+      return factory($);
+    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+})(function ($) {
+  $.easing.jswing = $.easing.swing;
+  var pow = Math.pow,
+      sqrt = Math.sqrt,
+      sin = Math.sin,
+      cos = Math.cos,
+      PI = Math.PI,
+      c1 = 1.70158,
+      c2 = c1 * 1.525,
+      c3 = c1 + 1,
+      c4 = 2 * PI / 3,
+      c5 = 2 * PI / 4.5;
+
+  function bounceOut(x) {
+    var n1 = 7.5625,
+        d1 = 2.75;
+
+    if (x < 1 / d1) {
+      return n1 * x * x;
+    } else if (x < 2 / d1) {
+      return n1 * (x -= 1.5 / d1) * x + .75;
+    } else if (x < 2.5 / d1) {
+      return n1 * (x -= 2.25 / d1) * x + .9375;
+    } else {
+      return n1 * (x -= 2.625 / d1) * x + .984375;
+    }
+  }
+
+  $.extend($.easing, {
+    def: "easeOutQuad",
+    swing: function swing(x) {
+      return $.easing[$.easing.def](x);
+    },
+    easeInQuad: function easeInQuad(x) {
+      return x * x;
+    },
+    easeOutQuad: function easeOutQuad(x) {
+      return 1 - (1 - x) * (1 - x);
+    },
+    easeInOutQuad: function easeInOutQuad(x) {
+      return x < .5 ? 2 * x * x : 1 - pow(-2 * x + 2, 2) / 2;
+    },
+    easeInCubic: function easeInCubic(x) {
+      return x * x * x;
+    },
+    easeOutCubic: function easeOutCubic(x) {
+      return 1 - pow(1 - x, 3);
+    },
+    easeInOutCubic: function easeInOutCubic(x) {
+      return x < .5 ? 4 * x * x * x : 1 - pow(-2 * x + 2, 3) / 2;
+    },
+    easeInQuart: function easeInQuart(x) {
+      return x * x * x * x;
+    },
+    easeOutQuart: function easeOutQuart(x) {
+      return 1 - pow(1 - x, 4);
+    },
+    easeInOutQuart: function easeInOutQuart(x) {
+      return x < .5 ? 8 * x * x * x * x : 1 - pow(-2 * x + 2, 4) / 2;
+    },
+    easeInQuint: function easeInQuint(x) {
+      return x * x * x * x * x;
+    },
+    easeOutQuint: function easeOutQuint(x) {
+      return 1 - pow(1 - x, 5);
+    },
+    easeInOutQuint: function easeInOutQuint(x) {
+      return x < .5 ? 16 * x * x * x * x * x : 1 - pow(-2 * x + 2, 5) / 2;
+    },
+    easeInSine: function easeInSine(x) {
+      return 1 - cos(x * PI / 2);
+    },
+    easeOutSine: function easeOutSine(x) {
+      return sin(x * PI / 2);
+    },
+    easeInOutSine: function easeInOutSine(x) {
+      return -(cos(PI * x) - 1) / 2;
+    },
+    easeInExpo: function easeInExpo(x) {
+      return x === 0 ? 0 : pow(2, 10 * x - 10);
+    },
+    easeOutExpo: function easeOutExpo(x) {
+      return x === 1 ? 1 : 1 - pow(2, -10 * x);
+    },
+    easeInOutExpo: function easeInOutExpo(x) {
+      return x === 0 ? 0 : x === 1 ? 1 : x < .5 ? pow(2, 20 * x - 10) / 2 : (2 - pow(2, -20 * x + 10)) / 2;
+    },
+    easeInCirc: function easeInCirc(x) {
+      return 1 - sqrt(1 - pow(x, 2));
+    },
+    easeOutCirc: function easeOutCirc(x) {
+      return sqrt(1 - pow(x - 1, 2));
+    },
+    easeInOutCirc: function easeInOutCirc(x) {
+      return x < .5 ? (1 - sqrt(1 - pow(2 * x, 2))) / 2 : (sqrt(1 - pow(-2 * x + 2, 2)) + 1) / 2;
+    },
+    easeInElastic: function easeInElastic(x) {
+      return x === 0 ? 0 : x === 1 ? 1 : -pow(2, 10 * x - 10) * sin((x * 10 - 10.75) * c4);
+    },
+    easeOutElastic: function easeOutElastic(x) {
+      return x === 0 ? 0 : x === 1 ? 1 : pow(2, -10 * x) * sin((x * 10 - .75) * c4) + 1;
+    },
+    easeInOutElastic: function easeInOutElastic(x) {
+      return x === 0 ? 0 : x === 1 ? 1 : x < .5 ? -(pow(2, 20 * x - 10) * sin((20 * x - 11.125) * c5)) / 2 : pow(2, -20 * x + 10) * sin((20 * x - 11.125) * c5) / 2 + 1;
+    },
+    easeInBack: function easeInBack(x) {
+      return c3 * x * x * x - c1 * x * x;
+    },
+    easeOutBack: function easeOutBack(x) {
+      return 1 + c3 * pow(x - 1, 3) + c1 * pow(x - 1, 2);
+    },
+    easeInOutBack: function easeInOutBack(x) {
+      return x < .5 ? pow(2 * x, 2) * ((c2 + 1) * 2 * x - c2) / 2 : (pow(2 * x - 2, 2) * ((c2 + 1) * (x * 2 - 2) + c2) + 2) / 2;
+    },
+    easeInBounce: function easeInBounce(x) {
+      return 1 - bounceOut(1 - x);
+    },
+    easeOutBounce: bounceOut,
+    easeInOutBounce: function easeInOutBounce(x) {
+      return x < .5 ? (1 - bounceOut(1 - 2 * x)) / 2 : (1 + bounceOut(2 * x - 1)) / 2;
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/sb-admin-2.min.js":
+/*!****************************************!*\
+  !*** ./resources/js/sb-admin-2.min.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*!
+ * Start Bootstrap - SB Admin 2 v4.0.6 (https://startbootstrap.com/template-overviews/sb-admin-2)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/blob/master/LICENSE)
+ */
+!function (t) {
+  "use strict";
+
+  t("#sidebarToggle, #sidebarToggleTop").on("click", function (o) {
+    t("body").toggleClass("sidebar-toggled"), t(".sidebar").toggleClass("toggled"), t(".sidebar").hasClass("toggled") && t(".sidebar .collapse").collapse("hide");
+  }), t(window).resize(function () {
+    t(window).width() < 768 && t(".sidebar .collapse").collapse("hide");
+  }), t("body.fixed-nav .sidebar").on("mousewheel DOMMouseScroll wheel", function (o) {
+    if (768 < t(window).width()) {
+      var e = o.originalEvent,
+          l = e.wheelDelta || -e.detail;
+      this.scrollTop += 30 * (l < 0 ? 1 : -1), o.preventDefault();
+    }
+  }), t(document).on("scroll", function () {
+    100 < t(this).scrollTop() ? t(".scroll-to-top").fadeIn() : t(".scroll-to-top").fadeOut();
+  }), t(document).on("click", "a.scroll-to-top", function (o) {
+    var e = t(this);
+    t("html, body").stop().animate({
+      scrollTop: t(e.attr("href")).offset().top
+    }, 1e3, "easeInOutExpo"), o.preventDefault();
+  });
+}(jQuery);
+
+/***/ }),
+
+/***/ "./resources/sass/admin.min.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/admin.min.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -49440,15 +49710,16 @@ Array.from(document.querySelectorAll('.nav-link')).forEach(function (node) {
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/dark.scss ./resources/sass/main.scss ***!
-  \*******************************************************************************************************************/
+/*!***************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/dark.scss ./resources/sass/admin.min.scss ./resources/sass/main.scss ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/html/kalasinga/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/dark.scss */"./resources/sass/dark.scss");
+__webpack_require__(/*! /var/www/html/kalasinga/resources/sass/admin.min.scss */"./resources/sass/admin.min.scss");
 module.exports = __webpack_require__(/*! /var/www/html/kalasinga/resources/sass/main.scss */"./resources/sass/main.scss");
 
 

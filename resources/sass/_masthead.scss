@@ -26,36 +26,7 @@
     }
   }
 
-.kodeklinik-box{
-    height: 500px;
-    width: 436px;
-    background: rgba(66, 125, 248, 0.8);
-    border: none;
-    border-radius: 5px;
-    position: absolute;
-    top: 24%;
-    left: 30px;
-    padding: 15px 30px;
-    @media(max-width:720px) {
-        display: none;
-        
-    }
-    .content{
-        width: 100%;
-        padding: 20px 0;
-        height: 100%;
-        // background: #fff;
-        p.h2{
-            color: #ffffff;
-            position: absolute;
-            margin: 0 auto;
-            font-family: "Open Sans",sans-serif;
 
-        }
-    }
-    
-
-}
 
 .scroller{
     display: block;
@@ -82,4 +53,24 @@ button.submit {
   background-clip: text;
   // make fill color to transparent so that masked background color will be shown
   -webkit-text-fill-color: transparent;
+}
+
+.play-btn   {
+
+    position: absolute;
+    left: 40px;
+    bottom: -10px;
+    padding: 10px;
+    background: transparent;
+    color: #73161687;
+    border: none;
+    &:active,&:focus    {
+        border:none;
+        border-color:transparent
+    }
+}
+
+.play-icon {
+    
+    font-size: 3.4em;
 }
