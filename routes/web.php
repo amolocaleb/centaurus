@@ -50,17 +50,5 @@ Route::get('/portfolio', function () {
 Route::get('/portfolio/{id}', function ($id) {
     return view('pages.portfolio.single',['id'=>$id]);
 });
-<<<<<<< HEAD
 Route::resource('developers', 'DeveloperController');
 Route::get('developers', 'DeveloperController@index');
-=======
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
-Route::resource('admabout', 'AboutController');
->>>>>>> b1ace110ebe9f89145359db12eae6baa728e9223
