@@ -8,6 +8,7 @@ require('./bootstrap');
 require('./jquery.easing.min');
 require('./sb-admin-2.min');
 require ('./header');
+require('../../node_modules/jspdf/dist/jspdf.min');
 
 require('./admin');
 window.Vue = require('vue');
