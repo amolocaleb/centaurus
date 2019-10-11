@@ -44,7 +44,7 @@ class DeveloperController extends Controller
             'status' => 'required',
             'title' => 'required',
             'bio' => 'required',
-            'profile_pic'=>'image|nullable|max:1999'
+            'profile_pic'=>'image|mimes:jpeg,png,jpg,gif|nullable|max:1999'
           ]);
 
           //file upload handler
@@ -89,7 +89,7 @@ class DeveloperController extends Controller
     {
         $developer = Developer::find($id);
     
-        return view('pages.developers.edit')->with('developer', $developer);
+        return view('pages.developers.show')->with('developer', $developer);
     }
 
     /**

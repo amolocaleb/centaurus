@@ -40,6 +40,22 @@
           </div>
         </div> --}}
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/developers" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fa fa-fw fa-user-o"></i>
+          <i class="far "></i>
+          <span>Developers</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">More of developers:</h6>
+            <a class="collapse-item" href="/developers">View Developers</a>
+            <a class="collapse-item" href="/developers/create">Add Developer</a>
+            <a class="collapse-item" href="#">Categories</a>
+            <a class="collapse-item" href="#">Sub-categories</a>
+          </div>
+        </div>
+      </li>
       <!-- Nav Item - Pages Collapse Menu -->
       {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">

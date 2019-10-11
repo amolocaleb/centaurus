@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDevelopersTable extends Migration
+class CreateDevCatTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateDevelopersTable extends Migration
      */
     public function up()
     {
-        Schema::create('developers', function (Blueprint $table) {
+        Schema::create('dev_cat', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('dob');
-            $table->string('email')->unique();
-            $table->string('status');
-            $table->string('title');
-            $table->string('bio' ,255);
-            $table->string('profile_pic')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ class CreateDevelopersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('developers');
+        Schema::dropIfExists('dev_cat');
     }
 }

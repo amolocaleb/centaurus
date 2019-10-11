@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -26,15 +26,15 @@
         @if(session()->get('success'))
           <div class="alert alert-success">
             {{ session()->get('success') }}  
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div><br />
         @endif
 </div>
 <div class="col-md-8">
   @if(count($developers)>0)
-
-
-
-        <table class="table table-striped">
+ <table class="table table-striped">
           <thead>
               <tr>
                 <td>ID</td>

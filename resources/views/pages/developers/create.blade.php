@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -20,6 +20,11 @@
     margin: 40px 0px;
 
   }
+.form-control-file {
+  background-color: aliceblue;
+  border-radius: 4px;
+
+}
 </style>
 <div class="card uper">
   <div class="card-header">
@@ -38,9 +43,11 @@
     <div class="container">
         <div class="col-md-6">
 
-        <form method="post" action="{{ route('developers.store') }}" enctype="multypart/form-data">
+        <form method="post" action="{{ route('developers.store') }}" enctype="multipart/form-data">
+          
             <div class="form-group">
                 @csrf
+              
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" name="name"/>
             </div>
@@ -54,7 +61,10 @@
             </div>
             <div class="form-group">
               <label for="quantity">Marital Status:</label>
-              <input type="text" class="form-control" name="status"/>
+              <select name="status" id="" class="form-control">
+                <option value="single" >Single</option>
+                <option value="married">Married</option>
+              </select>
           </div>
           <div class="form-group">
               <label for="quantity">Title:</label>
@@ -65,10 +75,8 @@
               <textarea name="bio" class="form-control" cols="30" rows="10"></textarea>
           </div>
           <div class="form-group">
-            <label for="quantity">Profile Pic: </label>
-            <p>Jpeg images</p>
-            <br>
-            <input type="file"  name="profile_pic"/>
+            <label for="profile_pic">Profile Pic: Jpg Image (Max: 2MB)</label>
+            <input type="file"  name="profile_pic" class="form-control-file"/>
         </div>
             <button type="submit" class="btn btn-primary">Add Developer</button>
         </form>
