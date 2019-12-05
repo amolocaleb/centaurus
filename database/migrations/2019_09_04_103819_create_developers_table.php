@@ -14,7 +14,7 @@ class CreateDevelopersTable extends Migration
     public function up()
     {
         Schema::create('developers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('user_id');
             $table->string('name');
             $table->string('dob');
             $table->string('email')->unique();
@@ -24,6 +24,19 @@ class CreateDevelopersTable extends Migration
             $table->timestamps();
         });
     }
+    /*
+     * CREATE TABLE `users` (
+	`user_id` int(11) NOT NULL AUTO_INCREMENT,
+	`name` varchar(100) NOT NULL,
+	`role_id` int(3) NOT NULL,
+	`created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` DATETIME ,
+	`deleted_at` DATETIME ,
+	`password` varchar(150) NOT NULL,
+	`email` varchar(60) NOT NULL UNIQUE,
+	PRIMARY KEY (`user_id`)
+);
+     */
 
     /**
      * Reverse the migrations.

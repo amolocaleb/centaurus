@@ -37,7 +37,7 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid ">
-
+          <a href="{{route('sendEmail')}}" class="btn btn-sm btn-primary">Send Email</a>
           @yield('content')
         </div>
         <!-- /.container-fluid -->

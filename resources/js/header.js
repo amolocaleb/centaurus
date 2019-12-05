@@ -11,7 +11,11 @@ const initSetUp = ()    =>  {
         $($('head')).first().append('<link rel="stylesheet" id="dark_theme" href="/css/dark.css">');
         
     }
-    const previous = document.querySelector('.active').classList.toggle('active');
+    const previous = document.querySelectorAll('.active');
+    console.log(previous);
+    previous.forEach(e=>{
+        e.classList.toggle('active');
+    })
     const [,currentURI] = location.pathname.split('/') || '/';
     const uriPathname = currentURI || '/';
     Array.from(document.querySelectorAll('.nav-link')).forEach(node => {

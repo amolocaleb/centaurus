@@ -11005,23 +11005,6 @@ a:focus {
   display: none;
 }
 
-.sidebar .nav-item.dropdown .dropdown-toggle::after,
-.topbar .nav-item.dropdown .dropdown-toggle::after {
-  width: 1rem;
-  text-align: center;
-  float: right;
-  vertical-align: 0;
-  border: 0;
-  font-weight: 900;
-  content: "\F105";
-  font-family: "Font Awesome 5 Free";
-}
-
-.sidebar .nav-item.dropdown.show .dropdown-toggle::after,
-.topbar .nav-item.dropdown.show .dropdown-toggle::after {
-  content: "\F107";
-}
-
 .sidebar .nav-item .nav-link,
 .topbar .nav-item .nav-link {
   position: relative;
@@ -11283,13 +11266,6 @@ a:focus {
   cursor: pointer;
 }
 
-.sidebar #sidebarToggle::after {
-  font-weight: 900;
-  content: "\F104";
-  font-family: "Font Awesome 5 Free";
-  margin-right: 0.1rem;
-}
-
 .sidebar #sidebarToggle:hover {
   text-decoration: none;
 }
@@ -11385,21 +11361,6 @@ a:focus {
   .sidebar .nav-item .nav-link span {
     font-size: 0.85rem;
     display: inline;
-  }
-
-  .sidebar .nav-item .nav-link[data-toggle=collapse]::after {
-    width: 1rem;
-    text-align: center;
-    float: right;
-    vertical-align: 0;
-    border: 0;
-    font-weight: 900;
-    content: "\F107";
-    font-family: "Font Awesome 5 Free";
-  }
-
-  .sidebar .nav-item .nav-link[data-toggle=collapse].collapsed::after {
-    content: "\F105";
   }
 
   .sidebar .sidebar-brand .sidebar-brand-icon i {
@@ -11676,24 +11637,8 @@ a:focus {
   padding: 0.75rem 3.25rem 0.75rem 1.25rem;
 }
 
-.card .card-header[data-toggle=collapse]::after {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-right: 1.725rem;
-  line-height: 51px;
-  font-weight: 900;
-  content: "\F107";
-  font-family: "Font Awesome 5 Free";
-  color: #d1d3e2;
-}
-
 .card .card-header[data-toggle=collapse].collapsed {
   border-radius: 0.35rem;
-}
-
-.card .card-header[data-toggle=collapse].collapsed::after {
-  content: "\F105";
 }
 
 .chart-area {

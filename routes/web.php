@@ -11,44 +11,56 @@
 |
 */
 
+/*
+ * Mail Routes
+ * 
+ */
+Route::middleware(['auth','admin'])->group(function(){
+	Route::get('/mail/inbox','EmailController@inbox')->name('inbox');
+	Route::get('/mail/sent','EmailController@sent')->name('sent');
+	Route::get('/mail/drafts','EmailController@drafts')->name('drafts');
+});
+
+
 Route::get('/', function () {
-    return view('pages.home');
+	return view('pages.home');
 })->name('home');
 
 Route::get('/developers', function () {
-    return view('pages.developer');
+	return view('pages.developer');
 })->name('developers');
 
 Route::get('/about', function () {
-    $arr = [];
-    for ($i=0;$i<10;$i++)   {
-        $closure = new stdClass();
-        $closure->id = $i;
-        $closure->description = 'Description '.$i;
-        $closure->title = 'Title '.$i;
-        $arr[] = $closure;
-    }
-    
-    return view('adm.about',['abouts'=> $arr]);
+	$arr = [];
+	for ($i = 0; $i < 10; $i++) {
+		$closure = new stdClass();
+		$closure->id = $i;
+		$closure->description = 'Description ' . $i;
+		$closure->title = 'Title ' . $i;
+		$arr[] = $closure;
+	}
+
+	return view('adm.about', ['abouts' => $arr]);
 })->name('about');
 
 Route::get('/home', function () {
-    return view('pages.home');
+	return view('pages.home');
 });
 
 Route::get('/admin', function () {
-    return view('layouts.admin');
+	return view('layouts.admin');
 });
 Route::get('/mail', function () {
-    return view('pages.mail');
+	return view('pages.mail');
 });
 
+Route::match(['get', 'post'], '/mailit', 'EmailController@contactus')->name('sendEmail');
 //portfolio routes
 Route::get('/portfolio', function () {
-    return view('pages.portfolio/portfolio');
+	return view('pages.portfolio/portfolio');
 });
 Route::get('/portfolio/{id}', function ($id) {
-    return view('pages.portfolio.single',['id'=>$id]);
+	return view('pages.portfolio.single', ['id' => $id]);
 });
 Route::resource('developers', 'DeveloperController');
-Route::get('developers', 'DeveloperController@index');
+// Route::get('developers', 'DeveloperController@index');

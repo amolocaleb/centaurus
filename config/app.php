@@ -229,4 +229,6 @@ return [
 
     ],
 
+    'mailman'   =>  "Caleb Amolo",
+
 ];
