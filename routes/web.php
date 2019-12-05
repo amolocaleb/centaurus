@@ -15,8 +15,9 @@
  * Mail Routes
  * 
  */
-Route::middleware(['auth','admin'])->group(function(){
-	Route::get('/mail/inbox','EmailController@inbox')->name('inbox');
+Route::get('/mail/inbox','EmailController@inbox')->name('inbox');
+Route::middleware(['admin'])->group(function(){
+	
 	Route::get('/mail/sent','EmailController@sent')->name('sent');
 	Route::get('/mail/drafts','EmailController@drafts')->name('drafts');
 });
@@ -27,21 +28,11 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/developers', function () {
-	return view('pages.developer');
+	$dev = \App\Developer::all();
+	return view('pages.developer',['developer'=>$dev]);
 })->name('developers');
 
-Route::get('/about', function () {
-	$arr = [];
-	for ($i = 0; $i < 10; $i++) {
-		$closure = new stdClass();
-		$closure->id = $i;
-		$closure->description = 'Description ' . $i;
-		$closure->title = 'Title ' . $i;
-		$arr[] = $closure;
-	}
 
-	return view('adm.about', ['abouts' => $arr]);
-})->name('about');
 
 Route::get('/home', function () {
 	return view('pages.home');
@@ -62,5 +53,13 @@ Route::get('/portfolio', function () {
 Route::get('/portfolio/{id}', function ($id) {
 	return view('pages.portfolio.single', ['id' => $id]);
 });
-Route::resource('developers', 'DeveloperController');
+// Route::resource('developers', 'DeveloperController',['names'=>[
+// 	'index' => 'developers',
+	
+// ]]);
 // Route::get('developers', 'DeveloperController@index');
+Route::get('/login',function(){
+	return view('auth.login');
+});
+
+Route::post('/processlogin','Auth\LoginController@login')->name('login');
