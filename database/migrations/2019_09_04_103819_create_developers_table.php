@@ -16,11 +16,11 @@ class CreateDevelopersTable extends Migration
         Schema::create('developers', function (Blueprint $table) {
             $table->bigIncrements('user_id');
             $table->string('name');
-            $table->string('dob');
+            $table->dateTime('dob');
             $table->string('email')->unique();
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->string('title');
-            $table->string('bio' ,255);
+            $table->text('bio');
             $table->timestamps();
         });
     }

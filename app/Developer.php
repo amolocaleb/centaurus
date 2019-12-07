@@ -12,6 +12,7 @@ class Developer extends Model
         'email',
         'status',
         'title',
-        'bio'
+        'bio',
+        'profile_pic'
       ];
 }

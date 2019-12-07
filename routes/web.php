@@ -15,8 +15,9 @@
  * Mail Routes
  * 
  */
-Route::middleware(['auth','admin'])->group(function(){
-	Route::get('/mail/inbox','EmailController@inbox')->name('inbox');
+Route::get('/mail/inbox','EmailController@inbox')->name('inbox');
+Route::middleware(['admin'])->group(function(){
+	
 	Route::get('/mail/sent','EmailController@sent')->name('sent');
 	Route::get('/mail/drafts','EmailController@drafts')->name('drafts');
 });
@@ -28,18 +29,6 @@ Route::get('/', function () {
 
 
 
-Route::get('/about', function () {
-	$arr = [];
-	for ($i = 0; $i < 10; $i++) {
-		$closure = new stdClass();
-		$closure->id = $i;
-		$closure->description = 'Description ' . $i;
-		$closure->title = 'Title ' . $i;
-		$arr[] = $closure;
-	}
-
-	return view('adm.about', ['abouts' => $arr]);
-})->name('about');
 
 Route::get('/home', function () {
 	return view('pages.home');
