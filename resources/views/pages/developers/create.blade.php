@@ -38,7 +38,7 @@
     <div class="container">
         <div class="col-md-6">
 
-        <form method="post" action="{{ route('developers.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('developers.store')}}" enctype="multipart/form-data">
             <div class="form-group">
                 @csrf
                 <label for="name">Name:</label>
@@ -51,11 +51,7 @@
             <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="text" class="form-control" name="email"/>
-            </div>
-            <div class="form-group">
-              <label for="status">Marital Status:</label>
-              <input type="text" class="form-control" name="status"/>
-          </div>
+</div>
           <div class="form-group">
               <label for="title">Title:</label>
               <input type="text" class="form-control" name="title"/>
@@ -65,7 +61,7 @@
               <textarea name="bio" class="form-control" cols="30" rows="10"></textarea>
           </div>
           <div class="form-group">
-            <label for="quantity">Profile Pic: </label>
+            <label for="profile">Profile Pic: </label>
             <p>Jpeg images</p>
             <br>
             <input type="file"  name="profile_pic"/>

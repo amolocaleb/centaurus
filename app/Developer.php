@@ -10,7 +10,6 @@ class Developer extends Model
         'name',
         'dob',
         'email',
-        'status',
         'title',
         'bio',
         'profile_pic'

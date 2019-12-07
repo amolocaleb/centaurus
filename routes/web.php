@@ -49,17 +49,7 @@ Route::get('/portfolio', function () {
 Route::get('/portfolio/{id}', function ($id) {
 	return view('pages.portfolio.single', ['id' => $id]);
 });
-Route::resource('developers', 'DeveloperController', ['names'=>[
-	'index'=>'pages.developer.index',
-	'create'=>'pages.developer,create'
-]]);
+Route::resource('developers', 'DeveloperController');
 // Route::get('developers', 'DeveloperController@index');
 
 
-//developer routes
-Route::get('/developers', function () {
-	return view('pages.developers.index');
-})->name('developers');
-Route::get('/developers/create', function () {
-	return view('pages.developers.create');
-})->name('developers');
