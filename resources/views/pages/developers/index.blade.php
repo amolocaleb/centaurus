@@ -29,6 +29,8 @@
           </div><br />
         @endif
 </div>
+
+ 
 <div class="col-md-8">
   @if(count($developers)>0)
 
@@ -71,7 +73,7 @@
         <h2>No developers Found</h2>
         @endif
       </div>
-
+      
       <div class="col-md-4">
         <a href="/developers/create" class="btn btn-primary">Add Developer</a>
       </div>

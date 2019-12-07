@@ -16,7 +16,7 @@ class DeveloperController extends Controller
     {
         $developers = Developer::all();
 
-        return view('pages.developers.index')->with('developers', $developers);
+        return view('pages.developers.index',['developers'=> $developers]);
     }
 
     /**
@@ -37,6 +37,7 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
+        // \dd($request);
         $request->validate([
             'name'=>'required',
             'dob'=> 'required',
@@ -65,13 +66,13 @@ class DeveloperController extends Controller
           }
 
           $developer = new  Developer([
-            'name'=>$request->get('name'),
-            'dob'=>$request->get('dob'),
-            'email'=>$request->get('email'),
-            'status'=>$request->get('status'),
-            'title'=>$request->get('title'),
-            'bio'=>$request->get('bio'),
-            'profile_pic'=>$request=$fileNameToStore
+            'name'=>$request->name,
+            'dob'=>$request->dob,
+            'email'=>$request->email,
+            'status'=>$request->status,
+            'title'=>$request->title,
+            'bio'=>$request->bio,
+            'profile_pic'=>$fileNameToStore
           ]);
           $developer->save();
 

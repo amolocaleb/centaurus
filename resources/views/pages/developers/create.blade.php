@@ -38,30 +38,30 @@
     <div class="container">
         <div class="col-md-6">
 
-        <form method="post" action="{{ route('developers.store') }}" enctype="multypart/form-data">
+        <form method="post" action="{{ route('developers.store') }}" enctype="multipart/form-data">
             <div class="form-group">
                 @csrf
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" name="name"/>
             </div>
             <div class="form-group">
-                <label for="price">Date of Birth :</label>
-                <input type="text" class="form-control" name="dob"/>
+                <label for="dob">Date of Birth :</label>
+                <input type="date" class="form-control" name="dob"/>
             </div>
             <div class="form-group">
-                <label for="quantity">Email :</label>
+                <label for="email">Email :</label>
                 <input type="text" class="form-control" name="email"/>
             </div>
             <div class="form-group">
-              <label for="quantity">Marital Status:</label>
+              <label for="status">Marital Status:</label>
               <input type="text" class="form-control" name="status"/>
           </div>
           <div class="form-group">
-              <label for="quantity">Title:</label>
+              <label for="title">Title:</label>
               <input type="text" class="form-control" name="title"/>
           </div>
           <div class="form-group">
-              <label for="quantity">Bio:</label>
+              <label for="bio">Bio:</label>
               <textarea name="bio" class="form-control" cols="30" rows="10"></textarea>
           </div>
           <div class="form-group">
