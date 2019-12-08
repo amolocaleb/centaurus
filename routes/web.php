@@ -30,7 +30,7 @@ Route::group(['prefix' => '{locale}'], function () {
 			return view('layouts.admin');
 		})->name('admin');
 	});
-	Route::resource('developers', 'DeveloperController');
+	Route::resource('/developers', 'DeveloperController');
 	Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 	Route::post('/login', 'Auth\LoginController@login')->name('login');
 	Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

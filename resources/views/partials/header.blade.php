@@ -7,7 +7,7 @@
             <li class="nav-item"><a href="{{route('portfolio',app()->getLocale())}}" class="nav-link nav-line-height  d-flex align-items-center"><span>Portfolio</span></a></li>
             
             <li class="nav-item">
-            <a href="{{'/developers'}}" class="nav-link dev-has-dropdown nav-line-height  d-flex align-items-center"><span>Developers</span></a>
+            <a href="{{route('developers.index',app()->getLocale())}}" class="nav-link dev-has-dropdown nav-line-height  d-flex align-items-center"><span>Developers</span></a>
                 <ul class="sub-menu columns2">
                     <li class="sub-menu-item">
                         
