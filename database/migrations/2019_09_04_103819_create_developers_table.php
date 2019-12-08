@@ -14,7 +14,7 @@ class CreateDevelopersTable extends Migration
     public function up()
     {
         Schema::create('developers', function (Blueprint $table) {
-            $table->bigIncrements('user_id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->dateTime('dob');
             $table->string('email')->unique();

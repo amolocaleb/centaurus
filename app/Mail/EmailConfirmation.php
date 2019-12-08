@@ -29,6 +29,8 @@ class EmailConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->subject($this->data->subject)->view('emails.confirm');
+        return $this->subject($this->data->subject)
+                    ->from(auth()->user()->email,auth()->user()->name)
+                    ->markdown('emails.contactusresponse');
     }
 }

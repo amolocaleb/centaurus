@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserRolesTable extends Migration
+class AddFieldToToEmailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateUserRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_roles', function (Blueprint $table) {
-            $table->integer('id',true);
-            $table->string('code',50)->unique();
+        Schema::table('emails', function (Blueprint $table) {
+            $table->string('to');
         });
     }
 
@@ -26,6 +25,8 @@ class CreateUserRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_roles');
+        Schema::table('emails', function (Blueprint $table) {
+            $table->dropColumn('to');
+        });
     }
 }

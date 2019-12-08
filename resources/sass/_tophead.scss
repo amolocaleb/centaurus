@@ -11,3 +11,32 @@
 
     }
 }
+.admin-link{
+    &:hover{
+        text-decoration: none;
+        color: #fff;
+        // padding: 5px;
+        // background: #e03434b9;
+    }
+}
+.lang_icons{
+    height: 21px;
+}
+
+.lang_uk:before,.lang_fr:before,.lang_it:before{
+    content: ' ';
+    height: 21px;
+    width: 30px;
+    vertical-align: middle;
+    display: inline-flex;
+    
+}
+.lang_uk:before{
+    background: url('/img/uk.svg') no-repeat;
+}
+.lang_fr:before{
+    background: url('/img/fr.svg') no-repeat;
+}
+.lang_it:before{
+    background: url('/img/it.svg') no-repeat;
+}
