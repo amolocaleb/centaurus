@@ -7,12 +7,12 @@
              
        @include('partials.styles')
        <script src="/js/app.js"></script>
-       <script src="/js/jquery.easypiechart.js"></script>
+       {{-- <script src="/js/jquery.easypiechart.js"></script>
        <script src="/js/jquery.fluidbox.min.js"></script>
        <script src="/js/jquery.waypoints.js"></script>
        <script src="/js/progressbar.min.js"></script>
        <script src="/js/scripts.js"></script>
-       <script src="/js/tether.min.js"></script>
+       <script src="/js/tether.min.js"></script> --}}
     </head>
     <body>
     <!-- header -->

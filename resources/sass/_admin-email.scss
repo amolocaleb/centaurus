@@ -241,3 +241,8 @@ ul#accordionSidebar::before{
     opacity: .5;
     color: #fff;
 }
+
+.pagination-links{
+    display: flex;
+    justify-content: flex-end;
+}

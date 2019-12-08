@@ -48,7 +48,7 @@ const mailControlClickHandler = (id) =>  {
 
 const openCompose = () => {
     const url = location.href.split('#',2);
-    
+    console.log(url);
     if (url.length > 1) {
         if ('compose' === url[1].toLowerCase()) {
             mailControlClickHandler('create_email');
@@ -77,22 +77,8 @@ $(document).ready(function(){
 
     });
 
-   document.querySelector('#print_mail').addEventListener('click',(e)=>{e.preventDefault();pdfGenerator()});
+   
     
 });
 
-let pdfGenerator =   function(){
-    let htm =   $(".open-message").html();
-    const obj  =   new jsPDF();
-    obj.fromHTML(htm,5,5,{
-        "width":170,
-        "elementHandlers":{
-            "#editor":function(el,renderer){
-                return true;
-            }
-        }
-    });
 
-    obj.save(`Doc-${Math.random()}.pdf`);
-
-};

@@ -12408,6 +12408,11 @@ ul#accordionSidebar::before {
   color: #fff;
 }
 
+.pagination-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @font-face {
   font-family: LineAwesome;
   src: url(/fonts/vendor/line-awesome/line-awesome.eot?3f85d8035b4ccd91d2a1808dd22b7684);
