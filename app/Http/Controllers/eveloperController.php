@@ -7,7 +7,7 @@ use App\Developer;
 
 class DeveloperController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -15,8 +15,8 @@ class DeveloperController extends Controller
     public function index()
     {
         $developers = Developer::all();
-        return view ('pages.developers.index', compact('developers'));
-        
+
+        return view('pages.developers.index',compact('developers'));
     }
 
     /**
@@ -26,7 +26,6 @@ class DeveloperController extends Controller
      */
     public function create()
     {
-        //
         return view('pages.developers.create');
     }
 
@@ -38,23 +37,25 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
+        // \dd($request);
         $request->validate([
             'name'=>'required',
             'dob'=> 'required',
             'email' => 'required',
+            'status' => 'required',
             'title' => 'required',
             'bio' => 'required',
             'profile_pic'=>'image|nullable|max:1999'
           ]);
 
           //file upload handler
-          if($request->hasFile('profile_pic')){
+          if($request->hasFile('cover_image')){
               //get filename with the extension
               $filenameWithExt = $request->file('profile_pic')->getClientOriginalName();
               //get just filename
               $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
               //get just ext
-              $extension = $request->file('profile_pic')->getClientOriginalExtension();
+              $extension = $request->file('profile_pic')->getClientExtension();
               //filename to store
               $fileNameToStore=$filename.'_'.time().'.'.$extension;
               //image upload
@@ -68,6 +69,7 @@ class DeveloperController extends Controller
             'name'=>$request->name,
             'dob'=>$request->dob,
             'email'=>$request->email,
+            'status'=>$request->status,
             'title'=>$request->title,
             'bio'=>$request->bio,
             'profile_pic'=>$fileNameToStore
@@ -88,10 +90,8 @@ class DeveloperController extends Controller
     {
         $developer = Developer::find($id);
     
-        return view('pages.developers.show')->with('developer', $developer);
+        return view('pages.developers.edit')->with('developer', $developer);
     }
-
-    
 
     /**
      * Show the form for editing the specified resource.
@@ -101,7 +101,9 @@ class DeveloperController extends Controller
      */
     public function edit($id)
     {
-        //
+        $developer = Developer::find($id);
+
+        return view('pages.developers.edit', compact('developer'));
     }
 
     /**
@@ -113,7 +115,6 @@ class DeveloperController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $request->validate([
             'name'=>'required',
             'dob'=> 'required',
@@ -143,7 +144,6 @@ class DeveloperController extends Controller
      */
     public function destroy($id)
     {
-        //
         $developer = Developer::find($id);
         $developer->delete();
    

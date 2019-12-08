@@ -35,15 +35,17 @@
         <ul class="professional-intro">
             <br>
             <div class="row">
-                <div class="col-sx-12 col-md-6">
-                <h2><b>{{$developer->name}}</b></h2>
+            <div class="col-md-4 col-sx-12">
+                <img src="/storage/profile_pictures/{{$developer->profile_pic}}" alt="" style="height: 250px;width: 250px;border-radius:10px;">
+            </div>
+                <div class="col-sx-12 col-md-4">
+                <h1><b>{{$developer->name}}</b></h1>
                 <ul>
                     <li><b>BORN : </b>{{$developer->dob}}</li>
                     <li><b>EMAIL : </b>{{$developer->email}}</li>
-                    <li><b>MARITAL STATUS : </b>{{$developer->status}}</li>
                 </ul>
                 </div>
-                <div class=" col-sx-12 col-md-6">
+                <div class=" col-sx-12 col-md-4">
                 <h3><b>{{$developer->title}}</b></h3>
                 <p>
                         {{$developer->bio}}
@@ -65,11 +67,6 @@
 
 
       <!-- skills -->
-        <div class="row">
-        <div class="heading">
-						<h3><b>Skills</b></h3>
-					</div>
-        </div>
         <br>
 
         <div class="row">
@@ -96,21 +93,27 @@
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
 							<p class="panel-desc">reflects the gradient pattern from start-to-end then end-to-start then start-to-end, 
 								continuously until the region is filled.</p>
-						</div><!-- panel-area -->
+                        </div> 
+                        
+                        <!-- panel-area -->
 						
 						<div class="panel-area margin-b-30">
 							<h5 class="panel-title"><b>GRAPHIC DESIGN</b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
 							<p class="panel-desc">reflects the gradient pattern from start-to-end then end-to-start then start-to-end, 
 								continuously until the region is filled.</p>
-						</div><!-- panel-area -->
+                        </div>
+                        <!-- panel-area -->
 						
 						<div class="panel-area margin-b-30">
 							<h5 class="panel-title"><b>MOTION DESIGN & VIDEO</b>
 								<i class="icon minus ion-minus"></i><i class="icon plus ion-plus"></i></h5>
 							<p class="panel-desc">reflects the gradient pattern from start-to-end then end-to-start then start-to-end, 
 								continuously until the region is filled.</p>
-						</div><!-- panel-area -->
+                        </div>
+                        
+                        
+                        <!-- panel-area -->
 					</div><!-- panel -->
                 </div>
 </div>

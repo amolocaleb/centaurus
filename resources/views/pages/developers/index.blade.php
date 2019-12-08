@@ -56,14 +56,14 @@
 
                   <td><a href="/developers/{{$developer->id}}/edit" class="btn btn-primary">Edit</a></td>
                   <td>
-                      <form action="{{ route('developers.destroy', $developer->id)}}" method="post">
+                      <form action="{{ url('/developers/'.$developer->id)}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger" type="submit">Delete</button>
                       </form>
                   </td>
                   <td>
-                    <a href="/developers/{{$developer->id}}" class="btn btn-success">View</a>
+                    <a href="{{route('developers.show',$developer->id)}}" class="btn btn-success">View</a>
                   </td>
               </tr>
               @endforeach

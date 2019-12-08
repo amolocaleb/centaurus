@@ -18,7 +18,6 @@ class CreateDevelopersTable extends Migration
             $table->string('name');
             $table->dateTime('dob');
             $table->string('email')->unique();
-            $table->string('status')->nullable();
             $table->string('title');
             $table->text('bio');
             $table->timestamps();
