@@ -19,7 +19,7 @@
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
-Route::redirect('/','/en');
+Route::redirect('/','/en/');
 Route::group(['prefix' => '{locale}'], function () {
 
 	Route::middleware(['admin'])->group(function () {

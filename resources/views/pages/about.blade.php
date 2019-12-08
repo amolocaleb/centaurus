@@ -129,7 +129,7 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
                             <div class="person text-center">
-                                <img src="img/cs2.jpg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
+                                <img src="/img/cs2.jpg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
                                 <h3>StudNet Blog</h3>
                                 <p class="position text-muted">Country,Kenya</p>
                                 <p class="mb-4">Social Media like blog for university students</p>
@@ -144,7 +144,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
                             <div class="person text-center">
-                                <img src="img/knm.svg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
+                                <img src="/img/knm.svg" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
                                 <h3>Kinemax</h3>
                                 <p class="position text-muted">Country,Namibia</p>
                                 <p class="mb-4">Reserve movie seats at your comfort</p>
@@ -158,7 +158,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
                             <div class="person text-center">
-                                <img src="img/md.png" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
+                                <img src="/img/md.png" alt="Image" class="img-fluid rounded-circle w-50 mb-5">
                                 <h3>MediCare</h3>
                                 <p class="position text-muted">Country, Unkown</p>
                                 <p class="mb-4">Book medical appointments</p>

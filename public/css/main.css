@@ -403,6 +403,15 @@ a {
   padding: 5px 20px;
 }
 
+.phone-navigation {
+  background: #5a5555;
+  width: inherit;
+  max-width: 80vw;
+  position: absolute;
+  right: 0;
+  z-index: 99999;
+}
+
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: 0.75rem;
