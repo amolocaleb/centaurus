@@ -3,7 +3,7 @@
             <a class="navbar-brand" href="#">KodeKlinik</a>
         </div>
         <ul class="nav app-nav">
-            <li class="nav-item"><a href="/" class="nav-link nav-line-height active  d-flex align-items-center"><span>{{__('Home')}}</span></a></li>
+        <li class="nav-item"><a href="{{'/'}}" class="nav-link nav-line-height active  d-flex align-items-center"><span>{{__('Home')}}</span></a></li>
             <li class="nav-item"><a href="{{route('portfolio',app()->getLocale())}}" class="nav-link nav-line-height  d-flex align-items-center"><span>{{__('Portfolio')}}</span></a></li>
             
             <li class="nav-item">

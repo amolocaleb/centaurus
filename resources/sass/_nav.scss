@@ -177,9 +177,17 @@ a{
 
 .phone-navigation{
     background: #5a5555;
-    width:inherit;
+    width: 50vw;
+    height: 100vh;
     max-width: 80vw;
     position: absolute;
     right: 0;
-    z-index: 99999;
+    *{
+        font-size: 15px;
+        font-weight: 200px;
+        // position: absolute;
+        list-style-type: none;
+
+    }
+    
 }
