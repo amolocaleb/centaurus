@@ -13993,14 +13993,12 @@ ul li ul.dropdown li {
 
 .phone-nav {
   font-size: 24px;
-  display: none;
 }
 
 @media (max-width: 720px) {
   .phone-nav {
-    display: block;
     right: 0;
-    position: absolute;
+    position: relative;
   }
 }
 
@@ -14128,6 +14126,7 @@ a {
   height: 100vh;
   max-width: 80vw;
   position: absolute;
+  z-index: 1;
   right: 0;
 }
 
@@ -14135,6 +14134,19 @@ a {
   font-size: 15px;
   font-weight: 200px;
   list-style-type: none;
+}
+
+.phone-nav-btn {
+  font-size: 24px;
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .phone-nav-btn {
+    display: block;
+    right: 0;
+    position: absolute;
+  }
 }
 
 :root {

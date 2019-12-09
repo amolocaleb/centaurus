@@ -11,6 +11,7 @@ require ('./header');
 require('../../node_modules/jspdf/dist/jspdf.min');
 
 require('./admin');
+require('./mobile');
 // window.Vue = require('vue');
 
 /**

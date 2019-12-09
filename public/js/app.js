@@ -37158,7 +37158,9 @@ __webpack_require__(/*! ./header */ "./resources/js/header.js");
 
 __webpack_require__(/*! ../../node_modules/jspdf/dist/jspdf.min */ "./node_modules/jspdf/dist/jspdf.min.js");
 
-__webpack_require__(/*! ./admin */ "./resources/js/admin.js"); // window.Vue = require('vue');
+__webpack_require__(/*! ./admin */ "./resources/js/admin.js");
+
+__webpack_require__(/*! ./mobile */ "./resources/js/mobile.js"); // window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -37446,6 +37448,20 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
       return x < .5 ? (1 - bounceOut(1 - 2 * x)) / 2 : (1 + bounceOut(2 * x - 1)) / 2;
     }
   });
+});
+
+/***/ }),
+
+/***/ "./resources/js/mobile.js":
+/*!********************************!*\
+  !*** ./resources/js/mobile.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$('#openMenu').click(function () {
+  $('.phone-navigation').toggleClass('d-block');
+  console.log($('.phone-navigation'));
 });
 
 /***/ }),

@@ -40,11 +40,11 @@ ul{
 
 .phone-nav{
     font-size: 24px;
-    display: none;
+    
     @media(max-width:720px) {
-        display: block;
+       
         right: 0;
-        position: absolute;
+        position: relative;
     }
 
     & + .app-nav{
@@ -85,10 +85,7 @@ ul{
     border-radius: 18px;
     
 }
-.nav-link:hover{
-    //background:#313131;
-    
-}
+
 
 .nav-line-height.nav-link{
     &:after{
@@ -165,10 +162,6 @@ a{
     
 }
 
-// .dev-has-dropdown:hover + .columns2{
-//     display: flex;
-//     transition: 3s ease-in-out;
-// }
 
 .sub-menu .nav-link{
     padding: 5px 20px;
@@ -181,6 +174,7 @@ a{
     height: 100vh;
     max-width: 80vw;
     position: absolute;
+    z-index: 1;
     right: 0;
     *{
         font-size: 15px;
@@ -190,4 +184,15 @@ a{
 
     }
     
+}
+
+.phone-nav-btn{
+    font-size: 24px;
+    display: none;
+    @media(max-width:720px) {
+        display: block;
+        right: 0;
+        position: absolute;
+    }
+
 }
