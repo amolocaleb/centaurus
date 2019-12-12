@@ -19,7 +19,7 @@
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
-Route::redirect('/',app()->getLocale());
+Route::redirect('/','en');
 Route::group(['prefix' => '{locale}'], function () {
 
 	Route::middleware(['admin'])->group(function () {
@@ -30,7 +30,10 @@ Route::group(['prefix' => '{locale}'], function () {
 			return view('layouts.admin');
 		})->name('admin');
 	});
-	Route::resource('/developers', 'DeveloperController');
+
+	Route::resource('/developers','DeveloperController',
+	['names'=>'dev'])->parameters(['developers'=>'id']);
+	
 	Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 	Route::post('/login', 'Auth\LoginController@login')->name('login');
 	Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

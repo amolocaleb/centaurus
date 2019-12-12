@@ -38,7 +38,7 @@
     <div class="container">
         <div class="col-md-6">
 
-        <form method="POST" action="{{route('developers.store')}}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('dev.store',app()->getLocale())}}" enctype="multipart/form-data">
             <div class="form-group">
                 @csrf
                 <label for="name">Name:</label>

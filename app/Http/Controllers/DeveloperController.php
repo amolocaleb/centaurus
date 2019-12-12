@@ -101,7 +101,7 @@ class DeveloperController extends Controller
      */
     public function edit($id)
     {
-        //
+        dd(request()->all(),$id);
     }
 
     /**

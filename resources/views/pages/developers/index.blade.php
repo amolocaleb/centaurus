@@ -54,16 +54,16 @@
                   <td>{{$developer->email}}</td>
                   <td>{{$developer->title}}</td>
 
-                  <td><a href="/developers/{{$developer->id}}/edit" class="btn btn-primary">Edit</a></td>
+              <td><a href="{{route('dev.edit',['id'=>$developer->id,'locale'=>app()->getLocale()])}}" class="btn btn-primary">Edit</a></td>
                   <td>
-                      <form action="{{ url('/developers/'.$developer->id)}}" method="post">
+                      <form action="{{ route('dev.destroy',['id'=>$developer->id,'locale'=>app()->getLocale()])}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger" type="submit">Delete</button>
                       </form>
                   </td>
                   <td>
-                    <a href="{{route('developers.show',$developer->id)}}" class="btn btn-success">View</a>
+                    <a href="{{route('dev.show',['locale'=>app()->getLocale(),'id'=>$developer->id])}}" class="btn btn-success">View</a>
                   </td>
               </tr>
               @endforeach
@@ -75,7 +75,7 @@
       </div>
       
       <div class="col-md-4">
-        <a href="/developers/create" class="btn btn-primary">Add Developer</a>
+        <a href="{{route('dev.create',app()->getLocale())}}" class="btn btn-primary">Add Developer</a>
       </div>
       <div>
         </div>
