@@ -20,7 +20,7 @@ class Admin
         {
             return $next($request);
         }
-        return redirect('/'.app()->getLocale().'/login')
+        return redirect('/login')
                 ->with(['error_msg'=>'Perforing this action requires elevated privileges.You are not authorised']);
     }
 }

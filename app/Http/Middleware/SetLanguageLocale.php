@@ -18,7 +18,7 @@ class SetLanguageLocale
     {
         if( $request->locale !== app()->getLocale())
             App::setLocale($request->locale);
-        
+        // dd($request);
         return $next($request);
     }
 }

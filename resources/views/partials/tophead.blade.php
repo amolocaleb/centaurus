@@ -14,9 +14,9 @@
 						<i class="fa fa-phone" aria-hidden="true"></i> Call us: (+254)-57-502-3851
 						<span class="mx-2"></span> |
 						<span class="mx-2"></span>
-						<a href="{{route(Route::currentRouteName(),'en')}}" class="lang_uk"></a>
-						<a href="{{route(Route::currentRouteName(),'it')}}" class="lang_it"></a>
-						<a href="{{route(Route::currentRouteName(),'fr')}}" class="lang_fr"></a>
+						<a href="{{route(Route::currentRouteName(),['locale'=>'en',Route::current()->parameter('id')])}}" class="lang_uk"></a>
+						<a href="{{route(Route::currentRouteName(),['locale'=>'it',Route::current()->parameter('id')])}}" class="lang_it"></a>
+						<a href="{{route(Route::currentRouteName(),['locale'=>'fr',Route::current()->parameter('id')])}}" class="lang_fr"></a>
 						
 						<span class="mx-2"></span> |
 						<span class="mx-2"></span>

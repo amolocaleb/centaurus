@@ -86,8 +86,8 @@ class DeveloperController extends Controller
      */
     public function show($id)
     {
-        $developer = Developer::find($id);
-    
+        $developer = Developer::find(request('id'));
+        // dd($developer);
         return view('pages.developers.show')->with('developer', $developer);
     }
 
@@ -101,7 +101,7 @@ class DeveloperController extends Controller
      */
     public function edit($id)
     {
-        dd(request()->all(),$id);
+        //
     }
 
     /**
